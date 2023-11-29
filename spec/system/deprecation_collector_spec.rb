@@ -23,7 +23,7 @@ describe "Deprecation collector", type: :system do
     page.execute_script <<~JS
       const deprecated = require("discourse-common/lib/deprecated").default;
       deprecated("Fake deprecation message", { id: #{test_deprecation_id.to_json} })
-      deprecated("Second fake deprecation message", { id: "not a real deprecation" })
+      deprecated("Second fake deprecation message", { id: "discourse.fake_deprecation" })
     JS
 
     # Refresh the page to trigger the collector
