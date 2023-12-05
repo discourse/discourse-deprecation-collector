@@ -1,6 +1,6 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
-import Service from "@ember/service";
+import Service, { inject as service } from "@ember/service";
 import discourseDebounce from "discourse-common/lib/debounce";
 import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse-common/lib/deprecated";
 import getURL from "discourse-common/lib/get-url";
@@ -18,6 +18,8 @@ registerDiscourseDeprecationHandler((message, opts) =>
 );
 
 export default class DeprecationCollector extends Service {
+  @service router;
+
   #configById = new Map();
   #counts = new Map();
   #reportDebounce;
@@ -32,6 +34,7 @@ export default class DeprecationCollector extends Service {
     }
 
     document.addEventListener("visibilitychange", this.handleVisibilityChanged);
+    this.router.on("routeWillChange", this.debouncedReport);
   }
 
   willDestroy() {
@@ -40,6 +43,7 @@ export default class DeprecationCollector extends Service {
       "visibilitychange",
       this.handleVisibilityChanged
     );
+    this.router.off("routeWillChange", this.debouncedReport);
     cancel(this.#reportDebounce);
     super.willDestroy();
   }
@@ -61,7 +65,10 @@ export default class DeprecationCollector extends Service {
     let count = this.#counts.get(options.id) || 0;
     count += 1;
     this.#counts.set(options.id, count);
+  }
 
+  @bind
+  debouncedReport() {
     this.#reportDebounce = discourseDebounce(this.report, 10_000);
   }
 
