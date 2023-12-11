@@ -1,6 +1,7 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { inject as service } from "@ember/service";
+import identifySource from "discourse/lib/source-identifier";
 import discourseDebounce from "discourse-common/lib/debounce";
 import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse-common/lib/deprecated";
 import getURL from "discourse-common/lib/get-url";
@@ -59,6 +60,10 @@ export default class DeprecationCollector extends Service {
   @bind
   track(message, options) {
     if (this.#configById.get(options.id) === "silence") {
+      return;
+    }
+
+    if (identifySource()?.type === "browser-extension") {
       return;
     }
 
