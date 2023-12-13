@@ -82,6 +82,7 @@ module DeprecationCollector
       ember-string.from-ember-module
       implicit-injections
       deprecate-implicit-route-model
+      ember-views.curly-components.jquery-element
     ] +
       # discourse deprecations
       %w[
