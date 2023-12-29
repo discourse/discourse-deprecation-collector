@@ -25,5 +25,11 @@ require_relative "lib/deprecation_collector/engine"
 
 on(:web_fork_started) do
   # initialize counters so that `rate()` works correctly in prometheus
-  DeprecationCollector::List.each { |key| DeprecationCollector.add_to_counter(key, 0) }
+  if defined?(::DiscoursePrometheus)
+    DeprecationCollector::List.each { |key| DeprecationCollector.add_to_counter(key, 0) }
+  else
+    STDERR.puts(
+      "Discourse Prometheus plugin is not installed. Deprecation collector will not work.",
+    )
+  end
 end

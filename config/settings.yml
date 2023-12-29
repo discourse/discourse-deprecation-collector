@@ -1,3 +1,11 @@
 deprecation_collector:
   deprecation_collector_enabled:
     default: false
+  deprecation_collector_warn_critical_deprecations:
+    default: false
+    hidden: true
+    client: true
+  deprecation_collector_critical_deprecations_message:
+    default: ""
+    hidden: true
+    client: true
