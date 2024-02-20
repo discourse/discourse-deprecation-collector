@@ -90,5 +90,6 @@ module DeprecationCollector
         discourse.global.user
         discourse.global.site
         discourse.global.site-settings
+        discourse.bootbox
       ]
 end
