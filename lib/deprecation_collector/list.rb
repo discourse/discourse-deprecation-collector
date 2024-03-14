@@ -165,7 +165,7 @@ module DeprecationCollector
         discourse.utils-decorators-import
         discourse.utils-decorators-observes
         discourse.utils-decorators-on
-        hide-popover
-        show-popover
+        discourse.hide-popover
+        discourse.show-popover
       ]
 end
