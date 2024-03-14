@@ -9,7 +9,8 @@ describe "Deprecation collector", type: :system do
 
     logged_deprecations = []
 
-    test_deprecation_id = DeprecationCollector::List.first
+    test_deprecation_id = "fake-ember-deprecation"
+    DeprecationCollector::List.push(test_deprecation_id)
 
     stub =
       DeprecationCollector
@@ -32,5 +33,7 @@ describe "Deprecation collector", type: :system do
     try_until_success do
       expect(logged_deprecations).to include(test_deprecation_id, "_other_discourse")
     end
+  ensure
+    DeprecationCollector::List.push(test_deprecation_id)
   end
 end
