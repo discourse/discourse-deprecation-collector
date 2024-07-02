@@ -1,0 +1,31 @@
+name: Update Ember Deprecations
+on:
+  schedule:
+    - cron: '0 0 * * 1' # run every Monday 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-ember-deprecations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Run deprecation script
+        run: ruby ./scripts/update_ember_deprecations.rb
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: Update ember deprecations
+          title: Update Ember Deprecations
+          body: |
+            This PR updates the list of Ember deprecations in the `deprecation-ids.yml` file.
+          branch: update-ember-deprecations
+          delete-branch: true
+          add-paths: ./lib/deprecation_collector/deprecation-ids.yml
