@@ -1,7 +1,8 @@
 name: Update Ember Deprecations
 on:
+  schedule:
+    - cron: '0 0 * * 1' # run every Monday 00:00 UTC
   workflow_dispatch:
-  # schedule: 0 0 * * 1
 
 jobs:
   update-ember-deprecations:
