@@ -25,7 +25,7 @@ jobs:
           commit-message: Update ember deprecations
           title: Update Ember Deprecations
           body: |
-            This PR updates the list of Ember deprecations in the `deprecation-ids.yaml` file.
+            This PR updates the list of Ember deprecations in the `deprecation-ids.yml` file.
           branch: update-ember-deprecations
           delete-branch: true
           add-paths: ./lib/deprecation_collector/deprecation-ids.yml
