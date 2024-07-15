@@ -1,6 +1,7 @@
 ---
 ember_deprecation_ids:
 - component-template-resolving
+- deprecate-array-prototype-extensions
 - deprecate-implicit-route-model
 - template-action
 discourse_deprecation_ids:
