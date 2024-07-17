@@ -1,10 +1,6 @@
 {
   "presets": ["@babel/preset-env"],
   "plugins": [
-    "@babel/plugin-syntax-jsx",
-//    "@babel/plugin-syntax-typescript",
     ["@babel/plugin-proposal-decorators", { "version": "2023-11" }],
-    "babel-plugin-ember-template-compilation",
-//    "ember-template-imports/lib/babel-plugin"
   ]
 }

@@ -1,13 +1,11 @@
 import fs from "fs";
 import path from "path";
+import yaml from "js-yaml";
 import parser from "@babel/parser";
 import _traverse from "@babel/traverse";
 import * as t from "@babel/types";
 import { promisify } from "util";
 import { Preprocessor } from "content-tag";
-
-const DEBUG_FILE =
-  "/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/instance-initializers/discovery-controller-shims.js";
 
 const traverse = _traverse.default;
 const readdir = promisify(fs.readdir);
@@ -31,18 +29,18 @@ async function isExcludedDir(filePath) {
   return EXCLUDED_DIR_PATTERNS.some((pattern) => filePath.includes(pattern));
 }
 
-function extractId(node, scope, shouldLog = false, ast = null) {
+function extractId(node, scope, ast = null) {
   if (t.isObjectExpression(node)) {
     for (const prop of node.properties) {
       if (
         t.isObjectProperty(prop) &&
-        t.isIdentifier(prop.key, {name: "id"})
+        t.isIdentifier(prop.key, { name: "id" })
       ) {
         if (t.isStringLiteral(prop.value)) {
           return [prop.value.value];
         } else if (t.isIdentifier(prop.value)) {
           // discovery-controller-shim is here
-          return resolveIdentifier(prop.value.name, scope, shouldLog, ast);
+          return resolveIdentifier(prop.value.name, scope, ast);
         }
       }
     }
@@ -50,10 +48,10 @@ function extractId(node, scope, shouldLog = false, ast = null) {
   return [];
 }
 
-function resolveIdentifier(name, scope, shouldLog = false, ast = null) {
+function resolveIdentifier(name, scope, ast = null) {
   const binding = scope.getBinding(name);
   if (!binding) {
-    return []
+    return [];
   }
 
   if (t.isVariableDeclarator(binding.path.node)) {
@@ -72,36 +70,25 @@ function resolveIdentifier(name, scope, shouldLog = false, ast = null) {
     }
   }
   if (t.isIdentifier(binding.path.node) && binding.kind === "param") {
-    if (shouldLog) {
-      let argIndex;
-      const calleeFunctionName = binding
-        .path
-        .findParent(p => {
-          if (p.isFunctionDeclaration()) {
-            const matchingArg = p.node.params.find(p => p.name === name)
-            if (matchingArg) {
-              argIndex = p.node.params.findIndex(p => p.name === name)
-              return true
-            }
-          }
-        })
-        .node
-        .id.name
+    let argIndex;
+    const calleeFunctionName = binding.path.findParent((p) => {
+      if (p.isFunctionDeclaration()) {
+        const matchingArg = p.node.params.find((p) => p.name === name);
+        if (matchingArg) {
+          argIndex = p.node.params.findIndex((p) => p.name === name);
+          return true;
+        }
+      }
+    })?.node?.id?.name;
 
-      return traverseForDeprecationId(ast, name, calleeFunctionName, argIndex, shouldLog)
-    }
+    return traverseForDeprecationId(ast, name, calleeFunctionName, argIndex);
   }
   return [];
 }
 
 async function parseFile(filePath) {
-  let shouldLog = false;
   let hasDeprecatedFunction = false;
   let code = await readFile(filePath, "utf8");
-
-  if (filePath == DEBUG_FILE) {
-    shouldLog = true;
-  }
 
   try {
     if (filePath.endsWith(".gjs")) {
@@ -121,7 +108,7 @@ async function parseFile(filePath) {
           hasDeprecatedFunction = true;
           for (const arg of path.node.arguments) {
             if (t.isObjectExpression(arg)) {
-              const extractedIds = extractId(arg, path.scope, shouldLog, ast);
+              const extractedIds = extractId(arg, path.scope, ast);
               if (extractedIds) {
                 ids.push(...extractedIds);
               }
@@ -184,21 +171,24 @@ async function parseDirectory(directoryPath) {
   return ids;
 }
 
-function traverseForDeprecationId(ast, deprecationIdName, calleeFunctionName, argIndex, shouldLog) {
+function traverseForDeprecationId(
+  ast,
+  deprecationIdName,
+  calleeFunctionName,
+  argIndex
+) {
   const ids = [];
   if (!ast) {
-    return null
-  }
-  if (shouldLog) {
-    console.log(deprecationIdName)
+    return null;
   }
 
   traverse(ast, {
     CallExpression(path) {
       if (t.isIdentifier(path.node.callee, { name: calleeFunctionName })) {
-        console.dir(path.node.arguments[argIndex])
         const id = path.node.arguments[argIndex].value;
-        if (id) { ids.push(id) }
+        if (id) {
+          ids.push(id);
+        }
         //TODO else raise a missing id error
       }
     },
@@ -206,7 +196,6 @@ function traverseForDeprecationId(ast, deprecationIdName, calleeFunctionName, ar
 
   return ids;
 }
-
 
 // Main script
 (async () => {
@@ -218,8 +207,21 @@ function traverseForDeprecationId(ast, deprecationIdName, calleeFunctionName, ar
   const directoryPath = process.argv[2];
   const ids = [...new Set(await parseDirectory(directoryPath))].sort();
 
-  // Save the extracted ids to a text file
-  fs.writeFileSync("core_extracted_ids.txt", ids.join("\n"), "utf8");
-  console.log(`${ids.length} Extracted IDs saved to core_extracted_ids.txt`);
+  // const yamlFilePath = path.join(__dirname, '..', 'lib', 'deprecation_collector', 'deprecation-ids.yml');
+  const deprecationIdsFilePath = path.join(
+    ".",
+    "lib",
+    "deprecation_collector",
+    "deprecation-ids.yml"
+  );
+  const deprecationIds = yaml.load(
+    fs.readFileSync(deprecationIdsFilePath, "utf8")
+  );
+  deprecationIds["discourse_deprecation_ids"] = ids;
+  fs.writeFileSync(
+    deprecationIdsFilePath,
+    yaml.dump(deprecationIds, { "---": true, noArrayIndent: true }),
+    "utf8"
+  );
+  console.log(`${ids.length} Extracted IDs saved to ${deprecationIdsFilePath}`);
 })();
-
