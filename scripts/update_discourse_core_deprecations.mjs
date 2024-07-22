@@ -39,7 +39,6 @@ function extractId(node, scope, ast = null) {
         if (t.isStringLiteral(prop.value)) {
           return [prop.value.value];
         } else if (t.isIdentifier(prop.value)) {
-          // discovery-controller-shim is here
           return resolveIdentifier(prop.value.name, scope, ast);
         }
       }
@@ -69,6 +68,7 @@ function resolveIdentifier(name, scope, ast = null) {
       }
     }
   }
+  // discovery-controller-shim case
   if (t.isIdentifier(binding.path.node) && binding.kind === "param") {
     let argIndex;
     const calleeFunctionName = binding.path.findParent((p) => {
@@ -83,7 +83,33 @@ function resolveIdentifier(name, scope, ast = null) {
 
     return traverseForDeprecationId(ast, name, calleeFunctionName, argIndex);
   }
+
   return [];
+}
+
+function traverseForDeprecationId(
+  ast,
+  deprecationIdName,
+  calleeFunctionName,
+  argIndex
+) {
+  const ids = [];
+  if (!ast) {
+    return null;
+  }
+
+  traverse(ast, {
+    CallExpression(path) {
+      if (t.isIdentifier(path.node.callee, { name: calleeFunctionName })) {
+        const id = path.node.arguments[argIndex].value;
+        if (id) {
+          ids.push(id);
+        }
+      }
+    },
+  });
+
+  return ids;
 }
 
 async function parseFile(filePath) {
@@ -171,32 +197,6 @@ async function parseDirectory(directoryPath) {
   return ids;
 }
 
-function traverseForDeprecationId(
-  ast,
-  deprecationIdName,
-  calleeFunctionName,
-  argIndex
-) {
-  const ids = [];
-  if (!ast) {
-    return null;
-  }
-
-  traverse(ast, {
-    CallExpression(path) {
-      if (t.isIdentifier(path.node.callee, { name: calleeFunctionName })) {
-        const id = path.node.arguments[argIndex].value;
-        if (id) {
-          ids.push(id);
-        }
-        //TODO else raise a missing id error
-      }
-    },
-  });
-
-  return ids;
-}
-
 // Main script
 (async () => {
   if (process.argv.length < 3) {
@@ -207,7 +207,15 @@ function traverseForDeprecationId(
   const directoryPath = process.argv[2];
   const ids = [...new Set(await parseDirectory(directoryPath))].sort();
 
-  // const yamlFilePath = path.join(__dirname, '..', 'lib', 'deprecation_collector', 'deprecation-ids.yml');
+  if (filesToDebug.length > 0) {
+    const filesToDebugFilePath = path.join(
+      ".",
+      "scripts",
+      "files_to_debug.txt"
+    )
+    fs.writeFileSync(filesToDebugFilePath, filesToDebug.join("\n"));
+  }
+
   const deprecationIdsFilePath = path.join(
     ".",
     "lib",
@@ -220,7 +228,7 @@ function traverseForDeprecationId(
   deprecationIds["discourse_deprecation_ids"] = ids;
   fs.writeFileSync(
     deprecationIdsFilePath,
-    yaml.dump(deprecationIds, { "---": true, noArrayIndent: true }),
+    "---\n" + yaml.dump(deprecationIds, { noArrayIndent: true }),
     "utf8"
   );
   console.log(`${ids.length} Extracted IDs saved to ${deprecationIdsFilePath}`);
