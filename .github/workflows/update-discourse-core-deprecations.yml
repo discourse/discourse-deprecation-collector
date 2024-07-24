@@ -1,0 +1,47 @@
+name: Update Discourse Core Deprecations
+on:
+  schedule:
+    - cron: '0 0 * * 1' # run every Monday 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-discourse-core-deprecations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: discourse/discourse
+          path: 'discourse'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: yarn
+
+      - name: Yarn install
+        run: yarn install
+
+      - name: Run deprecation script
+        id: run-script
+        run: |
+          node ./scripts/update_discourse_core_deprecations.mjs ./discourse
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: Update discourse core deprecations
+          title: Update Discourse Core Deprecations
+          body: |
+            This PR updates the list of Discourse deprecations in the `deprecation-ids.yml` file.
+            
+            The `files_to_debug.txt` file contains paths of files that should be checked for deprecation IDs that
+            were not found by the script. Please remove those entries (**but not the file**) before merging. 
+
+          branch: update-discourse-core-deprecations
+          delete-branch: true
+          add-paths: |
+            ./lib/deprecation_collector/deprecation-ids.yml
+            ./scripts/files_to_debug.txt
