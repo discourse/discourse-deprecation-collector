@@ -22,6 +22,7 @@ discourse_deprecation_ids:
 - discourse.capitalize-string
 - discourse.category-hashtags.categoryHashtagTriggerRule
 - discourse.category-list.listForParent
+- discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer-message.closeMessage
@@ -66,7 +67,6 @@ discourse_deprecation_ids:
 - discourse.offset-calculator.minimumOffset
 - discourse.open-topic-draft
 - discourse.period-mixin
-- discourse.plugin-connector.deprecated-arg
 - discourse.plugin-outlet-args
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
