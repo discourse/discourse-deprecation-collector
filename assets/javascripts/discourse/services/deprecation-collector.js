@@ -2,12 +2,13 @@ import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { inject as service } from "@ember/service";
 import identifySource from "discourse/lib/source-identifier";
+import DEPRECATION_WORKFLOW from "discourse-common/deprecation-workflow";
 import discourseDebounce from "discourse-common/lib/debounce";
 import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse-common/lib/deprecated";
 import getURL from "discourse-common/lib/get-url";
 import { bind } from "discourse-common/utils/decorators";
 
-// Deprecation handling APIs don't have any way to unregister handlers, so we set up permenant
+// Deprecation handling APIs don't have any way to unregister handlers, so we set up permanent
 // handlers and link them up to the application lifecycle using module-local state.
 let handler;
 registerDeprecationHandler((message, opts, next) => {
@@ -29,8 +30,7 @@ export default class DeprecationCollector extends Service {
     super(...arguments);
     handler = this.track;
 
-    const workflowConfig = window.deprecationWorkflow?.config?.workflow || {};
-    for (const c of workflowConfig) {
+    for (const c of DEPRECATION_WORKFLOW) {
       this.#configById.set(c.matchId, c.handler);
     }
 
