@@ -29,6 +29,7 @@ export default class DeprecationCollector extends Service {
     super(...arguments);
     handler = this.track;
 
+    // TODO
     const workflowConfig = window.deprecationWorkflow?.config?.workflow || {};
     for (const c of workflowConfig) {
       this.#configById.set(c.matchId, c.handler);
