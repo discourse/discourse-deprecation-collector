@@ -7,7 +7,8 @@ module DeprecationCollector
 
   deprecations = YAML.load_file(DEPRECATION_IDS_FILE)
   List =
-    (deprecations["ember_deprecation_ids"] || []).concat(
-      deprecations["discourse_deprecation_ids"] || [],
-    )
+    (deprecations["ember_deprecation_ids"] || [])
+      .concat(deprecations["discourse_deprecation_ids"] || [])
+      .concat(%w[discourse.plugin-connector.deprecated-arg.header-contents.topic])
+      .uniq
 end
