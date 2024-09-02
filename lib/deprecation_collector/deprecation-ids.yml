@@ -25,7 +25,6 @@ discourse_deprecation_ids:
 - discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
 - discourse.composer-controller.clear-popup-menu-options-callback
-- discourse.composer-message.closeMessage
 - discourse.composer.usernames
 - discourse.controller-for
 - discourse.create-store-helper
