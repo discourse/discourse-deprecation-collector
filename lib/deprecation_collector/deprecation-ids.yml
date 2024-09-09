@@ -6,8 +6,6 @@ ember_deprecation_ids:
 - template-action
 discourse_deprecation_ids:
 - discourse.add-flag-property
-- discourse.add-header-icons
-- discourse.add-header-panel
 - discourse.add-toolbar-popup-menu-options-callback
 - discourse.add-user-menu-glyph
 - discourse.application-show-footer
@@ -50,7 +48,6 @@ discourse_deprecation_ids:
 - discourse.globals.user
 - discourse.header-extra-info.needs-second-row-if
 - discourse.header-service-topic
-- discourse.header-widget-overrides
 - discourse.hide-popover
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
