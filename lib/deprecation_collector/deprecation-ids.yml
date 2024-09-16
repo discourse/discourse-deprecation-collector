@@ -39,6 +39,7 @@ discourse_deprecation_ids:
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discovery-topics-controller
 - discourse.fa-icon
+- discourse.fontawesome-6-upgrade
 - discourse.formatter.update-relative-age-node-list
 - discourse.get-owner-with-fallback
 - discourse.global.site
