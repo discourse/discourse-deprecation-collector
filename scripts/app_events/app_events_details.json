@@ -1,0 +1,782 @@
+[
+  {
+    "eventId": "ace:resize",
+    "filePath": "/app/assets/javascripts/admin/addon/components/admin-theme-editor.js",
+    "lineNumber": 109,
+    "comments": null
+  },
+  {
+    "eventId": "topic-entrance:show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/basic-topic-list.js",
+    "lineNumber": 106,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/components/bookmark-list.js",
+    "lineNumber": 40,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/components/bookmark-list.js",
+    "lineNumber": 78,
+    "comments": null
+  },
+  {
+    "eventId": "card:show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/card-contents-base.js",
+    "lineNumber": 63,
+    "comments": null
+  },
+  {
+    "eventId": "user-card:show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/card-contents-base.js",
+    "lineNumber": 88,
+    "comments": null
+  },
+  {
+    "eventId": "user-card:after-show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/card-contents-base.js",
+    "lineNumber": 93,
+    "comments": null
+  },
+  {
+    "eventId": "card:hide",
+    "filePath": "/app/assets/javascripts/discourse/app/components/card-contents-base.js",
+    "lineNumber": 264,
+    "comments": null
+  },
+  {
+    "eventId": "composer:find-similar",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 67,
+    "comments": null
+  },
+  {
+    "eventId": "composer:div-resizing",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 93,
+    "comments": null
+  },
+  {
+    "eventId": "composer:resized",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 127,
+    "comments": null
+  },
+  {
+    "eventId": "composer:resize-started",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 145,
+    "comments": null
+  },
+  {
+    "eventId": "composer:resize-ended",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 150,
+    "comments": null
+  },
+  {
+    "eventId": "composer:opened",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-body.js",
+    "lineNumber": 177,
+    "comments": null
+  },
+  {
+    "eventId": "decorate-non-stream-cooked-element",
+    "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
+    "lineNumber": 559,
+    "comments": null
+  },
+  {
+    "eventId": "d-editor:toolbar-button-clicked",
+    "filePath": "/app/assets/javascripts/discourse/app/components/d-editor.js",
+    "lineNumber": 180,
+    "comments": null
+  },
+  {
+    "eventId": "d-editor:preview-click-user-card",
+    "filePath": "/app/assets/javascripts/discourse/app/components/d-editor.js",
+    "lineNumber": 404,
+    "comments": null
+  },
+  {
+    "eventId": "d-editor:preview-click-group-card",
+    "filePath": "/app/assets/javascripts/discourse/app/components/d-editor.js",
+    "lineNumber": 412,
+    "comments": null
+  },
+  {
+    "eventId": "decorate-non-stream-cooked-element",
+    "filePath": "/app/assets/javascripts/discourse/app/components/d-editor.js",
+    "lineNumber": 533,
+    "comments": "trigger all the \"api.decorateCookedElement\""
+  },
+  {
+    "eventId": "keyboard-visibility-change",
+    "filePath": "/app/assets/javascripts/discourse/app/components/d-virtual-height.gjs",
+    "lineNumber": 88,
+    "comments": null
+  },
+  {
+    "eventId": "decorate-non-stream-cooked-element",
+    "filePath": "/app/assets/javascripts/discourse/app/components/discourse-banner.js",
+    "lineNumber": 51,
+    "comments": null
+  },
+  {
+    "eventId": "topic:scrolled",
+    "filePath": "/app/assets/javascripts/discourse/app/components/discourse-topic.js",
+    "lineNumber": 99,
+    "comments": "Trigger a scrolled event"
+  },
+  {
+    "eventId": "topic-entrance:show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/featured-topic.js",
+    "lineNumber": 16,
+    "comments": "attach this plox"
+  },
+  {
+    "eventId": "group:leave",
+    "filePath": "/app/assets/javascripts/discourse/app/components/group-membership-button.js",
+    "lineNumber": 49,
+    "comments": null
+  },
+  {
+    "eventId": "group:join",
+    "filePath": "/app/assets/javascripts/discourse/app/components/group-membership-button.js",
+    "lineNumber": 65,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/components/invite-panel.js",
+    "lineNumber": 340,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/components/invite-panel.js",
+    "lineNumber": 353,
+    "comments": null
+  },
+  {
+    "eventId": "header:show-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/components/modal/convert-to-public-topic.js",
+    "lineNumber": 23,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/components/modal/history.js",
+    "lineNumber": 190,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/components/search-menu.js",
+    "lineNumber": 297,
+    "comments": null
+  },
+  {
+    "eventId": "sidebar-hamburger-dropdown:rendered",
+    "filePath": "/app/assets/javascripts/discourse/app/components/sidebar/hamburger-dropdown.gjs",
+    "lineNumber": 26,
+    "comments": null
+  },
+  {
+    "eventId": "topic-entrance:show",
+    "filePath": "/app/assets/javascripts/discourse/app/components/topic-list-item.js",
+    "lineNumber": 33,
+    "comments": null
+  },
+  {
+    "eventId": "user-menu:tab-click",
+    "filePath": "/app/assets/javascripts/discourse/app/components/user-menu/menu.js",
+    "lineNumber": 313,
+    "comments": null
+  },
+  {
+    "eventId": "user-menu:rendered",
+    "filePath": "/app/assets/javascripts/discourse/app/components/user-menu/menu.js",
+    "lineNumber": 319,
+    "comments": null
+  },
+  {
+    "eventId": "decorate-non-stream-cooked-element",
+    "filePath": "/app/assets/javascripts/discourse/app/components/user-stream.js",
+    "lineNumber": 50,
+    "comments": null
+  },
+  {
+    "eventId": "decorate-non-stream-cooked-element",
+    "filePath": "/app/assets/javascripts/discourse/app/components/user-stream.js",
+    "lineNumber": 149,
+    "comments": null
+  },
+  {
+    "eventId": "full-page-search:trigger-search",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/full-page-search.js",
+    "lineNumber": 563,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 110,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 281,
+    "comments": null
+  },
+  {
+    "eventId": "composer:insert-block",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 458,
+    "comments": null
+  },
+  {
+    "eventId": "topic:current-post-changed",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 498,
+    "comments": null
+  },
+  {
+    "eventId": "topic:current-post-scrolled",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 505,
+    "comments": null
+  },
+  {
+    "eventId": "page:compose-reply",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 657,
+    "comments": null
+  },
+  {
+    "eventId": "composer:insert-block",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 679,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 719,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 899,
+    "comments": null
+  },
+  {
+    "eventId": "topic:jump-to-post",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 950,
+    "comments": null
+  },
+  {
+    "eventId": "topic:jump-to-post",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1329,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1361,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1402,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1719,
+    "comments": null
+  },
+  {
+    "eventId": "header:update-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1735,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/controllers/topic.js",
+    "lineNumber": 1865,
+    "comments": null
+  },
+  {
+    "eventId": "dom:clean",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/clean-dom-on-route-change.js",
+    "lineNumber": 32,
+    "comments": null
+  },
+  {
+    "eventId": "site-header:force-refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/narrow-desktop.js",
+    "lineNumber": 26,
+    "comments": null
+  },
+  {
+    "eventId": "cta:shown",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/signup-cta.js",
+    "lineNumber": 72,
+    "comments": null
+  },
+  {
+    "eventId": "notifications:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/subscribe-user-notifications.js",
+    "lineNumber": 155,
+    "comments": null
+  },
+  {
+    "eventId": "header:update-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/subscribe-user-notifications.js",
+    "lineNumber": 163,
+    "comments": null
+  },
+  {
+    "eventId": "user-status:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/instance-initializers/subscribe-user-notifications.js",
+    "lineNumber": 227,
+    "comments": null
+  },
+  {
+    "eventId": "click-tracked",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/click-track.js",
+    "lineNumber": 98,
+    "comments": null
+  },
+  {
+    "eventId": "desktop-notification-opened",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/desktop-notifications.js",
+    "lineNumber": 179,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/flag-targets/flag.js",
+    "lineNumber": 26,
+    "comments": null
+  },
+  {
+    "eventId": "quote-button:quote",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 324,
+    "comments": null
+  },
+  {
+    "eventId": "quote-button:edit",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 340,
+    "comments": null
+  },
+  {
+    "eventId": "header:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 438,
+    "comments": null
+  },
+  {
+    "eventId": "topic:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 505,
+    "comments": null
+  },
+  {
+    "eventId": "header:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 509,
+    "comments": null
+  },
+  {
+    "eventId": "header:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 518,
+    "comments": null
+  },
+  {
+    "eventId": "header:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 525,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 612,
+    "comments": null
+  },
+  {
+    "eventId": "keyboard:move-selection",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/keyboard-shortcuts.js",
+    "lineNumber": 777,
+    "comments": null
+  },
+  {
+    "eventId": "page:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/page-tracker.js",
+    "lineNumber": 41,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/post-bookmark-manager.js",
+    "lineNumber": 60,
+    "comments": null
+  },
+  {
+    "eventId": "push-notification-opened",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/push-notifications.js",
+    "lineNumber": 77,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/topic-bookmark-manager.js",
+    "lineNumber": 57,
+    "comments": null
+  },
+  {
+    "eventId": "post:highlight",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/url.js",
+    "lineNumber": 356,
+    "comments": null
+  },
+  {
+    "eventId": "user-menu:notification-click",
+    "filePath": "/app/assets/javascripts/discourse/app/lib/user-menu/notification-item.js",
+    "lineNumber": 85,
+    "comments": null
+  },
+  {
+    "eventId": "composer:reply-reloaded",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 937,
+    "comments": null
+  },
+  {
+    "eventId": "composer:reply-reloaded",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 963,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 1068,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 1080,
+    "comments": null
+  },
+  {
+    "eventId": "post:created",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 1203,
+    "comments": null
+  },
+  {
+    "eventId": "topic:created",
+    "filePath": "/app/assets/javascripts/discourse/app/models/composer.js",
+    "lineNumber": 1205,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:filter-replies",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 270,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 284,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:filter-upwards",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 299,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 304,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 438,
+    "comments": null
+  },
+  {
+    "eventId": "post:show-revision",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post-stream.js",
+    "lineNumber": 1286,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post.js",
+    "lineNumber": 404,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post.js",
+    "lineNumber": 408,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/post.js",
+    "lineNumber": 425,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/topic.js",
+    "lineNumber": 684,
+    "comments": null
+  },
+  {
+    "eventId": "do-not-disturb:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/user.js",
+    "lineNumber": 1222,
+    "comments": null
+  },
+  {
+    "eventId": "user-drafts:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/user.js",
+    "lineNumber": 1228,
+    "comments": null
+  },
+  {
+    "eventId": "user-reviewable-count:changed",
+    "filePath": "/app/assets/javascripts/discourse/app/models/user.js",
+    "lineNumber": 1233,
+    "comments": null
+  },
+  {
+    "eventId": "page:topic-loaded",
+    "filePath": "/app/assets/javascripts/discourse/app/routes/topic-from-params.js",
+    "lineNumber": 93,
+    "comments": null
+  },
+  {
+    "eventId": "post:highlight",
+    "filePath": "/app/assets/javascripts/discourse/app/routes/topic-from-params.js",
+    "lineNumber": 98,
+    "comments": "Highlight our post after the next render"
+  },
+  {
+    "eventId": "header:hide-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/routes/topic.js",
+    "lineNumber": 393,
+    "comments": null
+  },
+  {
+    "eventId": "header:update-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/routes/topic.js",
+    "lineNumber": 418,
+    "comments": null
+  },
+  {
+    "eventId": "composer:toolbar-popup-menu-button-clicked",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 671,
+    "comments": "menuItem is an object with keys name & action like so: { name: \"toggle-invisible, action: \"toggleInvisible\" }\n`action` value can either be a string (to lookup action by) or a function to call"
+  },
+  {
+    "eventId": "composer-messages:create",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 763,
+    "comments": null
+  },
+  {
+    "eventId": "composer-messages:create",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 773,
+    "comments": null
+  },
+  {
+    "eventId": "emoji-picker:close",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 896,
+    "comments": null
+  },
+  {
+    "eventId": "composer-messages:close",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 901,
+    "comments": null
+  },
+  {
+    "eventId": "composer-messages:create",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 952,
+    "comments": null
+  },
+  {
+    "eventId": "composer-messages:create",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 976,
+    "comments": null
+  },
+  {
+    "eventId": "composer-messages:create",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 985,
+    "comments": null
+  },
+  {
+    "eventId": "composer:saved",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1179,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1192,
+    "comments": null
+  },
+  {
+    "eventId": "composer:edited-post",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1198,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1199,
+    "comments": null
+  },
+  {
+    "eventId": "header:update-topic",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1203,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:refresh",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1206,
+    "comments": null
+  },
+  {
+    "eventId": "composer:created-post",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1210,
+    "comments": null
+  },
+  {
+    "eventId": "post:highlight",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1211,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:posted",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1276,
+    "comments": null
+  },
+  {
+    "eventId": "composer:typed-reply",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1293,
+    "comments": null
+  },
+  {
+    "eventId": "composer:open",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1438,
+    "comments": null
+  },
+  {
+    "eventId": "draft:destroyed",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1617,
+    "comments": null
+  },
+  {
+    "eventId": "composer:cancelled",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1686,
+    "comments": null
+  },
+  {
+    "eventId": "composer:cancelled",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1694,
+    "comments": null
+  },
+  {
+    "eventId": "composer:cancelled",
+    "filePath": "/app/assets/javascripts/discourse/app/services/composer.js",
+    "lineNumber": 1707,
+    "comments": null
+  },
+  {
+    "eventId": "discourse:focus-changed",
+    "filePath": "/app/assets/javascripts/discourse/app/services/document-title.js",
+    "lineNumber": 40,
+    "comments": null
+  },
+  {
+    "eventId": "topic:timings-sent",
+    "filePath": "/app/assets/javascripts/discourse/app/services/screen-track.js",
+    "lineNumber": 209,
+    "comments": null
+  },
+  {
+    "eventId": "composer:insert-text",
+    "filePath": "/app/assets/javascripts/discourse/app/services/search.js",
+    "lineNumber": 42,
+    "comments": null
+  },
+  {
+    "eventId": "header:keyboard-trigger",
+    "filePath": "/app/assets/javascripts/discourse/app/services/search.js",
+    "lineNumber": 49,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:gap-expanded",
+    "filePath": "/app/assets/javascripts/discourse/app/widgets/post-gap.js",
+    "lineNumber": 32,
+    "comments": null
+  },
+  {
+    "eventId": "post-stream:filter-show-all",
+    "filePath": "/app/assets/javascripts/discourse/app/widgets/post-stream.js",
+    "lineNumber": 184,
+    "comments": null
+  },
+  {
+    "eventId": "page:like-toggled",
+    "filePath": "/app/assets/javascripts/discourse/app/widgets/post.js",
+    "lineNumber": 1019,
+    "comments": null
+  }
+]
