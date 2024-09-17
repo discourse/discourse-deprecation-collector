@@ -189,7 +189,7 @@ async function parseDirectory(directoryPath) {
 // Main script
 (async () => {
   if (process.argv.length < 3) {
-    console.log("Usage: node extract_app_events.js <CODEBASE_DIR>");
+    console.log("Usage: node extract_app_events.mjs <CODEBASE_DIR>");
     process.exit(1);
   }
 
