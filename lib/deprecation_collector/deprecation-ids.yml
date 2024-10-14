@@ -24,7 +24,6 @@ discourse_deprecation_ids:
 - discourse.click-track.is-valid-link-jquery
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
-- discourse.controller-for
 - discourse.create-store-helper
 - discourse.createNewMessageViaParams
 - discourse.createNewTopicViaParams
@@ -72,7 +71,6 @@ discourse_deprecation_ids:
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
 - discourse.qunit.acceptance-function
-- discourse.qunit.assert-not
 - discourse.qunit.global-exists
 - discourse.register-connector-class-legacy
 - discourse.register-unbound
