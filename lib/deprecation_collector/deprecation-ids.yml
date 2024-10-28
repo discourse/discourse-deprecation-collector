@@ -36,6 +36,7 @@ discourse_deprecation_ids:
 - discourse.decorate-plugin-outlet
 - discourse.decorate-topic-title
 - discourse.deprecation-that-should-not-be-logged
+- discourse.discourse-debounce
 - discourse.discovery-topics-controller
 - discourse.fa-icon
 - discourse.fontawesome-6-upgrade
@@ -85,6 +86,7 @@ discourse_deprecation_ids:
 - discourse.topic-list-find
 - discourse.topic.totalUnread
 - discourse.uploads.display-error-for-upload
+- discourse.uppy-upload-mixin
 - discourse.user-menu.panel-component-class
 - discourse.user.resolved-timezone
 - discourse.user.userOptions
