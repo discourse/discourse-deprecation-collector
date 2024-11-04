@@ -50,12 +50,14 @@ discourse_deprecation_ids:
 - discourse.header-extra-info.needs-second-row-if
 - discourse.header-service-topic
 - discourse.hide-popover
+- discourse.html-helper
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
 - discourse.is-legacy-ember
 - discourse.jquery-cookie
 - discourse.lightbox.default-export
 - discourse.markdown-it.whitelist
+- discourse.mobile-templates
 - discourse.modal-controllers
 - discourse.models-store
 - discourse.nav-item.built-list-site-settings
