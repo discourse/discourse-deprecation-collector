@@ -1,5 +1,6 @@
 ---
 app_event_ids:
+- REFRESH_USER_SIDEBAR_CATEGORIES_SECTION_COUNTS_APP_EVENT_NAME
 - ace:resize
 - bookmarks:changed
 - card:hide
@@ -7,6 +8,7 @@ app_event_ids:
 - click-tracked
 - composer-messages:close
 - composer-messages:create
+- composer:cancel-upload
 - composer:cancelled
 - composer:created-post
 - composer:div-resizing
@@ -78,3 +80,4 @@ app_event_ids:
 - user-menu:tab-click
 - user-reviewable-count:changed
 - user-status:changed
+- null

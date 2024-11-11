@@ -6,7 +6,6 @@ import _traverse from "@babel/traverse";
 import * as t from "@babel/types";
 import { promisify } from "util";
 import { Preprocessor } from "content-tag";
-import {file} from "@babel/types";
 
 const traverse = _traverse.default;
 const readdir = promisify(fs.readdir);
@@ -32,7 +31,7 @@ async function isExcludedDir(filePath) {
 }
 
 async function parseFile(filePath) {
-  let hasAppEventsTrigger = false;
+  let hasAppEventsTrigger = { result: false };
   let code = await readFile(filePath, "utf8");
   const relativeFilePath = filePath.replace(pathToRemove, "")
 
@@ -67,13 +66,14 @@ async function parseFile(filePath) {
 function extractAppEvents(path, filePath, eventTriggers, hasAppEventsTrigger) {
   const { node } = path;
   const { callee } = node;
+  // This first condition checks for the .trigger identifier
   if (
     t.isMemberExpression(callee) &&
     t.isIdentifier(callee.property, { name: "trigger" }) &&
-    node.arguments.length > 0 &&
-    t.isStringLiteral(node.arguments[0])
+    node.arguments.length > 0
   ) {
-    const { object }  = path.node.callee;
+    const { object }  = callee;
+    // These conditions check that the object calling .trigger is referring to appEvents
     if (
       (t.isIdentifier(object, { name: "appEvents" })) ||
       (t.isMemberExpression(object) && t.isIdentifier(object.property, { name: "appEvents" })) ||
@@ -83,9 +83,19 @@ function extractAppEvents(path, filePath, eventTriggers, hasAppEventsTrigger) {
         t.isStringLiteral(object.arguments[0], { value: "service:app-events" })
       )
     ) {
-      hasAppEventsTrigger = true;
+      hasAppEventsTrigger.result = true;
 
-      const eventId = node.arguments[0].value;
+      let eventId;
+      if (t.isStringLiteral(node.arguments[0])) {
+        eventId = node.arguments[0].value;
+      } else if (t.isIdentifier(node.arguments[0])) {
+        eventId = node.arguments[0].name;
+      } else if (t.isCallExpression(node.arguments[0])) {
+
+      } else if (t.isTemplateLiteral(node.arguments[0])) {
+        // need to concatenate the quasis and expressions
+      }
+
       const location = node.loc;
       const lineNumber = location ? location.start.line : null;
       const comments = extractComments(path);
@@ -106,8 +116,7 @@ function extractAppEventsFromOptionalExpressions(path, filePath, eventTriggers, 
   if (
     t.isOptionalMemberExpression(callee) &&
     t.isIdentifier(callee.property, { name: "trigger" }) &&
-    node.arguments.length > 0 &&
-    t.isStringLiteral(node.arguments[0])
+    node.arguments.length > 0
   ) {
     const { object }  = path.node.callee;
     if (
@@ -119,9 +128,19 @@ function extractAppEventsFromOptionalExpressions(path, filePath, eventTriggers, 
         t.isStringLiteral(object.arguments[0], { value: "service:app-events" })
       )
     ) {
-      hasAppEventsTrigger = true;
+      hasAppEventsTrigger.result  = true;
 
-      const eventId = node.arguments[0].value;
+      let eventId;
+      if (t.isStringLiteral(node.arguments[0])) {
+        eventId = node.arguments[0].value;
+      } else if (t.isIdentifier(node.arguments[0])) {
+        eventId = node.arguments[0].name;
+      } else if (t.isCallExpression(node.arguments[0])) {
+
+      } else if (t.isTemplateLiteral(node.arguments[0])) {
+        // need to concatenate the quasis and expressions
+      }
+
       const location = node.loc;
       const lineNumber = location ? location.start.line : null;
       const comments = extractComments(path);
@@ -172,7 +191,7 @@ async function parseDirectory(directoryPath) {
     ) {
       const [parsedTriggers, hasAppEventsTrigger] = await parseFile(filePath);
 
-      if (hasAppEventsTrigger && parsedTriggers.length === 0) {
+      if (hasAppEventsTrigger.result && parsedTriggers.length === 0) {
         console.log(`DEBUG THE FILE: ${filePath}`);
         filesToDebug.push(filePath);
       }
