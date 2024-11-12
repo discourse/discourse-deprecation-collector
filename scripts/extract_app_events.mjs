@@ -191,7 +191,10 @@ async function parseDirectory(directoryPath) {
     ) {
       const [parsedTriggers, hasAppEventsTrigger] = await parseFile(filePath);
 
-      if (hasAppEventsTrigger.result && parsedTriggers.length === 0) {
+      if (
+        hasAppEventsTrigger.result &&
+        parsedTriggers.filter((trigger) => trigger.eventId).length === 0
+      ) {
         console.log(`DEBUG THE FILE: ${filePath}`);
         filesToDebug.push(filePath);
       }
