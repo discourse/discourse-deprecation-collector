@@ -1048,5 +1048,95 @@
     "filePath": "/app/assets/javascripts/discourse/app/widgets/post.js",
     "lineNumber": 1034,
     "comments": null
+  },
+  {
+    "eventId": "card:close",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/components/chat/direct-message-button.gjs",
+    "lineNumber": 32,
+    "comments": null
+  },
+  {
+    "eventId": "chat:rerender-header",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/components/chat-drawer.js",
+    "lineNumber": 91,
+    "comments": null
+  },
+  {
+    "eventId": "chat:toggle-expand",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/components/chat-drawer.js",
+    "lineNumber": 208,
+    "comments": null
+  },
+  {
+    "eventId": "chat:modify-selection",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/initializers/chat-keyboard-shortcuts.js",
+    "lineNumber": 60,
+    "comments": null
+  },
+  {
+    "eventId": "chat:open-insert-link-modal",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/initializers/chat-keyboard-shortcuts.js",
+    "lineNumber": 72,
+    "comments": null
+  },
+  {
+    "eventId": "chat:toggle-close",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/initializers/chat-keyboard-shortcuts.js",
+    "lineNumber": 98,
+    "comments": null
+  },
+  {
+    "eventId": "bookmarks:changed",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/lib/chat-message-interactor.js",
+    "lineNumber": 343,
+    "comments": null
+  },
+  {
+    "eventId": "chat:open-url",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/routes/chat.js",
+    "lineNumber": 51,
+    "comments": null
+  },
+  {
+    "eventId": "chat:toggle-close",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/routes/chat.js",
+    "lineNumber": 55,
+    "comments": null
+  },
+  {
+    "eventId": "chat:refresh-channel-members",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/services/chat-subscriptions-manager.js",
+    "lineNumber": 469,
+    "comments": null
+  },
+  {
+    "eventId": "notifications:changed",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/services/chat-tracking-state-manager.js",
+    "lineNumber": 110,
+    "comments": null
+  },
+  {
+    "eventId": "chat:toggle-expand",
+    "filePath": "/plugins/chat/assets/javascripts/discourse/services/chat.js",
+    "lineNumber": 404,
+    "comments": null
+  },
+  {
+    "eventId": "discourse-reactions:reaction-toggled",
+    "filePath": "/plugins/discourse-reactions/assets/javascripts/discourse/models/discourse-reactions-custom-reaction.js",
+    "lineNumber": 23,
+    "comments": null
+  },
+  {
+    "eventId": "poll:voted",
+    "filePath": "/plugins/poll/assets/javascripts/discourse/components/poll.gjs",
+    "lineNumber": 189,
+    "comments": null
+  },
+  {
+    "eventId": "poll:voted",
+    "filePath": "/plugins/poll/assets/javascripts/discourse/components/poll.gjs",
+    "lineNumber": 443,
+    "comments": null
   }
 ]

@@ -21,7 +21,8 @@ const EXCLUDED_DIR_PATTERNS = [
   "/discourse/vendor/",
   "/discourse/public/",
   "/discourse/spec/",
-  "/discourse/plugins/",
+  "/discourse/plugins/chat/test",
+  "/discourse/plugins/discourse-deprecation-collector/",
 ];
 const filesToDebug = [];
 let pathToRemove;
