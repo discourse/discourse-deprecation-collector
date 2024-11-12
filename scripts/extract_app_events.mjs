@@ -85,17 +85,7 @@ function extractAppEvents(path, filePath, eventTriggers, hasAppEventsTrigger) {
     ) {
       hasAppEventsTrigger.result = true;
 
-      let eventId;
-      if (t.isStringLiteral(node.arguments[0])) {
-        eventId = node.arguments[0].value;
-      } else if (t.isIdentifier(node.arguments[0])) {
-        eventId = node.arguments[0].name;
-      } else if (t.isCallExpression(node.arguments[0])) {
-
-      } else if (t.isTemplateLiteral(node.arguments[0])) {
-        // need to concatenate the quasis and expressions
-      }
-
+      const { eventId } = extractEventDetails(node.arguments[0]);
       const location = node.loc;
       const lineNumber = location ? location.start.line : null;
       const comments = extractComments(path);
@@ -130,17 +120,7 @@ function extractAppEventsFromOptionalExpressions(path, filePath, eventTriggers, 
     ) {
       hasAppEventsTrigger.result  = true;
 
-      let eventId;
-      if (t.isStringLiteral(node.arguments[0])) {
-        eventId = node.arguments[0].value;
-      } else if (t.isIdentifier(node.arguments[0])) {
-        eventId = node.arguments[0].name;
-      } else if (t.isCallExpression(node.arguments[0])) {
-
-      } else if (t.isTemplateLiteral(node.arguments[0])) {
-        // need to concatenate the quasis and expressions
-      }
-
+      const { eventId } = extractEventDetails(node.arguments[0]);
       const location = node.loc;
       const lineNumber = location ? location.start.line : null;
       const comments = extractComments(path);
@@ -153,6 +133,65 @@ function extractAppEventsFromOptionalExpressions(path, filePath, eventTriggers, 
       });
     }
   }
+}
+
+function extractEventDetails(eventIdNode) {
+  let eventId;
+
+  if (t.isStringLiteral(eventIdNode)) {
+    eventId = eventIdNode.value;
+  } else if (t.isIdentifier(eventIdNode)) {
+    eventId = eventIdNode.name;
+  } else if (t.isMemberExpression(eventIdNode)) {
+    eventId = extractNameFromMemberExpression(eventIdNode);
+  } else if (t.isCallExpression(eventIdNode)) {
+    let calleeObjectName;
+    if (eventIdNode.callee.object) {
+      calleeObjectName = t.isThisExpression(eventIdNode.callee.object) ? "this" : eventIdNode.callee.object.name;
+    }
+    eventId = `${calleeObjectName}.${eventIdNode.callee.property.name}`;
+  }
+  else if (t.isTemplateLiteral(eventIdNode)) {
+    eventId = eventIdNode.quasis.reduce((acc, quasi, index) => {
+      // empty string quasi value here is fine, just indicates that it's either a head or tail quasi that should have an expression interpolated
+      acc += quasi.value.raw;
+
+      const currExpression = eventIdNode.expressions[index];
+      if (currExpression) {
+        if (t.isIdentifier(currExpression)) {
+          acc += currExpression.name;
+        } else if (t.isMemberExpression(currExpression)) {
+          acc += extractNameFromMemberExpression(currExpression);
+        } else if (t.isCallExpression(currExpression)) {
+          let calleeObjectName;
+          if (currExpression.callee.object) {
+            calleeObjectName = t.isThisExpression(currExpression.callee.object) ? "this" : currExpression.callee.object.name;
+          }
+          acc += `${calleeObjectName}.${currExpression.callee.property.name}`;
+        }
+      }
+
+      return acc;
+    }, "");
+  }
+
+  return { eventId };
+}
+
+function extractNameFromMemberExpression(currExpression) {
+  let parts = [];
+  let currNode = currExpression;
+  while (t.isMemberExpression(currNode)) {
+    parts.unshift(currNode.property.name);
+    currNode = currNode.object;
+  }
+  if (t.isIdentifier(currNode)) {
+    parts.unshift(currNode.name);
+  } else if (t.isThisExpression(currNode)) {
+    parts.unshift("this");
+  }
+
+  return parts.join(".");
 }
 
 function extractComments(path) {
@@ -193,7 +232,7 @@ async function parseDirectory(directoryPath) {
 
       if (
         hasAppEventsTrigger.result &&
-        parsedTriggers.filter((trigger) => trigger.eventId).length === 0
+        parsedTriggers.filter((trigger) => trigger.eventId && !trigger.eventId.includes("undefined")).length === 0
       ) {
         console.log(`DEBUG THE FILE: ${filePath}`);
         filesToDebug.push(filePath);
@@ -224,7 +263,7 @@ async function parseDirectory(directoryPath) {
       ".",
       "scripts",
       "files_to_debug.txt"
-    )
+    );
     fs.writeFileSync(filesToDebugFilePath, filesToDebug.join("\n"));
   }
 

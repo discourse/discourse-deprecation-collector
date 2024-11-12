@@ -1,5 +1,11 @@
 ---
 app_event_ids:
+- LIGHTBOX_APP_EVENT_NAMES.CLOSE
+- LIGHTBOX_APP_EVENT_NAMES.CLOSED
+- LIGHTBOX_APP_EVENT_NAMES.ITEM_DID_CHANGE
+- LIGHTBOX_APP_EVENT_NAMES.ITEM_WILL_CHANGE
+- LIGHTBOX_APP_EVENT_NAMES.OPEN
+- LIGHTBOX_APP_EVENT_NAMES.OPENED
 - REFRESH_USER_SIDEBAR_CATEGORIES_SECTION_COUNTS_APP_EVENT_NAME
 - ace:resize
 - bookmarks:changed
@@ -25,12 +31,14 @@ app_event_ids:
 - composer:saved
 - composer:toolbar-popup-menu-button-clicked
 - composer:typed-reply
+- count-updated:user.username_lower:key
 - cta:shown
 - d-editor:preview-click-group-card
 - d-editor:preview-click-user-card
 - d-editor:toolbar-button-clicked
 - decorate-non-stream-cooked-element
 - desktop-notification-opened
+- destroyed-custom-html:this.name
 - discourse:focus-changed
 - do-not-disturb:changed
 - dom:clean
@@ -43,6 +51,7 @@ app_event_ids:
 - header:keyboard-trigger
 - header:show-topic
 - header:update-topic
+- inserted-custom-html:this.name
 - keyboard-visibility-change
 - keyboard:move-selection
 - notifications:changed
@@ -64,7 +73,24 @@ app_event_ids:
 - quote-button:quote
 - sidebar-hamburger-dropdown:rendered
 - site-header:force-refresh
+- this.composerEventPrefix:all-uploads-complete
+- this.composerEventPrefix:apply-surround
+- this.composerEventPrefix:closed
+- this.composerEventPrefix:insert-text
+- this.composerEventPrefix:replace-text
+- this.composerEventPrefix:upload-cancelled
+- this.composerEventPrefix:upload-error
+- this.composerEventPrefix:upload-started
+- this.composerEventPrefix:upload-success
+- this.composerEventPrefix:uploads-aborted
+- this.composerEventPrefix:uploads-cancelled
+- this.composerEventPrefix:uploads-preprocessing-complete
+- this.composerEventPrefix:will-close
+- this.composerEventPrefix:will-open
+- this.eventPrefix:insert-text
+- this.flagCreatedEvent
 - topic-entrance:show
+- topic-header:trigger-this.args.type-card
 - topic:created
 - topic:current-post-changed
 - topic:current-post-scrolled
@@ -72,6 +98,11 @@ app_event_ids:
 - topic:keyboard-trigger
 - topic:scrolled
 - topic:timings-sent
+- upload-mixin:this.config.id:all-uploads-complete
+- upload-mixin:this.config.id:in-progress-uploads
+- upload-mixin:this.config.id:upload-cancelled
+- upload-mixin:this.config.id:upload-success
+- upload-mixin:this.config.id:uploads-cancelled
 - user-card:after-show
 - user-card:show
 - user-drafts:changed
@@ -80,4 +111,3 @@ app_event_ids:
 - user-menu:tab-click
 - user-reviewable-count:changed
 - user-status:changed
-- null

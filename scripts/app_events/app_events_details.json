@@ -84,6 +84,7 @@
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:will-open",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 204,
     "comments": null
@@ -95,41 +96,49 @@
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 593,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 636,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 722,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:apply-surround",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 750,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:will-close",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 782,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:closed",
     "filePath": "/app/assets/javascripts/discourse/app/components/composer-editor.js",
     "lineNumber": 787,
     "comments": "need to wait a bit for the \"slide down\" transition of the composer"
   },
   {
+    "eventId": "inserted-custom-html:this.name",
     "filePath": "/app/assets/javascripts/discourse/app/components/custom-html.js",
     "lineNumber": 33,
     "comments": null
   },
   {
+    "eventId": "destroyed-custom-html:this.name",
     "filePath": "/app/assets/javascripts/discourse/app/components/custom-html.js",
     "lineNumber": 40,
     "comments": null
@@ -189,6 +198,7 @@
     "comments": null
   },
   {
+    "eventId": "topic-header:trigger-this.args.type-card",
     "filePath": "/app/assets/javascripts/discourse/app/components/header/topic/participant.gjs",
     "lineNumber": 19,
     "comments": null
@@ -416,6 +426,7 @@
     "comments": null
   },
   {
+    "eventId": "this.flagCreatedEvent",
     "filePath": "/app/assets/javascripts/discourse/app/lib/flag-targets/flag.js",
     "lineNumber": 15,
     "comments": null
@@ -505,11 +516,13 @@
     "comments": null
   },
   {
+    "eventId": "this.eventPrefix:insert-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/textarea-text-manipulation.js",
     "lineNumber": 423,
     "comments": null
   },
   {
+    "eventId": "this.eventPrefix:insert-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/textarea-text-manipulation.js",
     "lineNumber": 477,
     "comments": null
@@ -521,116 +534,139 @@
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:uploads-aborted",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 129,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:uploads-aborted",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 176,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:upload-cancelled",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 283,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:insert-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 342,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:upload-started",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 348,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 380,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:upload-success",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 388,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:all-uploads-complete",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 395,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 415,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:uploads-cancelled",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 427,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:upload-error",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 448,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 516,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 525,
     "comments": "Safari applies user-defined replacements to text inserted programmatically.\nOne of the most common replacements is ... -> …, so we take care of the case\nwhere that transformation has been applied to the original placeholder"
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 536,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:uploads-preprocessing-complete",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 549,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:replace-text",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 625,
     "comments": null
   },
   {
+    "eventId": "this.composerEventPrefix:apply-surround",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js",
     "lineNumber": 794,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:upload-success",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 249,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:upload-success",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 270,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:upload-cancelled",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 304,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:uploads-cancelled",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 346,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:in-progress-uploads",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 382,
     "comments": null
   },
   {
+    "eventId": "upload-mixin:this.config.id:all-uploads-complete",
     "filePath": "/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js",
     "lineNumber": 572,
     "comments": null
@@ -786,6 +822,7 @@
     "comments": null
   },
   {
+    "eventId": "count-updated:user.username_lower:key",
     "filePath": "/app/assets/javascripts/discourse/app/routes/user.js",
     "lineNumber": 102,
     "comments": null
@@ -941,31 +978,37 @@
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.OPENED",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 73,
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.ITEM_WILL_CHANGE",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 81,
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.ITEM_DID_CHANGE",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 88,
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.CLOSED",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 105,
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.OPEN",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 125,
     "comments": null
   },
   {
+    "eventId": "LIGHTBOX_APP_EVENT_NAMES.CLOSE",
     "filePath": "/app/assets/javascripts/discourse/app/services/lightbox.js",
     "lineNumber": 138,
     "comments": null

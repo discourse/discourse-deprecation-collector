@@ -1,7 +1,0 @@
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/components/custom-html.js
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/components/header/topic/participant.gjs
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/lib/textarea-text-manipulation.js
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/lib/uppy/composer-upload.js
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/lib/uppy/uppy-upload.js
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/routes/user.js
-/Users/kelvintyb/code/discourse/app/assets/javascripts/discourse/app/services/lightbox.js
