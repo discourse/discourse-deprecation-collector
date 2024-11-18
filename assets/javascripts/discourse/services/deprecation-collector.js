@@ -1,6 +1,6 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
-import Service, { inject as service } from "@ember/service";
+import Service, { service } from "@ember/service";
 import identifySource from "discourse/lib/source-identifier";
 import DEPRECATION_WORKFLOW from "discourse-common/deprecation-workflow";
 import discourseDebounce from "discourse-common/lib/debounce";
