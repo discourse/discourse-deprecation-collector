@@ -72,6 +72,7 @@ discourse_deprecation_ids:
 - discourse.plugin-outlet-context-get
 - discourse.plugin-outlet-parent-view
 - discourse.plugin-outlet-tag-name
+- discourse.post-menu-widget-overrides
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
 - discourse.qunit.acceptance-function
