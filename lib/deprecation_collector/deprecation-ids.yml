@@ -48,6 +48,7 @@ discourse_deprecation_ids:
 - discourse.global.user
 - discourse.globals.site
 - discourse.globals.user
+- discourse.hbr-topic-list-overrides
 - discourse.header-extra-info.needs-second-row-if
 - discourse.header-service-topic
 - discourse.hide-popover
