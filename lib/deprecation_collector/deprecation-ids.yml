@@ -23,6 +23,7 @@ discourse_deprecation_ids:
 - discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
 - discourse.component-template-overrides
+- discourse.component-test
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
 - discourse.create-store-helper
@@ -38,6 +39,7 @@ discourse_deprecation_ids:
 - discourse.decorate-topic-title
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discourse-debounce
+- discourse.discourse-module
 - discourse.discovery-topics-controller
 - discourse.fa-icon
 - discourse.fontawesome-6-upgrade
