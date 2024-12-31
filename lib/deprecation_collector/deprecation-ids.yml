@@ -69,7 +69,6 @@ discourse_deprecation_ids:
 - discourse.number-field
 - discourse.offset-calculator.minimumOffset
 - discourse.open-topic-draft
-- discourse.period-mixin
 - discourse.plugin-outlet-args
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
