@@ -94,6 +94,7 @@ discourse_deprecation_ids:
 - discourse.uploads.display-error-for-upload
 - discourse.uppy-upload-mixin
 - discourse.user-menu.panel-component-class
+- discourse.user-stream-item
 - discourse.user.resolved-timezone
 - discourse.user.userOptions
 - discourse.utils-decorators-import
