@@ -57,7 +57,6 @@ discourse_deprecation_ids:
 - discourse.inline-date
 - discourse.is-legacy-ember
 - discourse.jquery-cookie
-- discourse.lightbox.default-export
 - discourse.markdown-it.whitelist
 - discourse.mobile-templates
 - discourse.modal-controllers
