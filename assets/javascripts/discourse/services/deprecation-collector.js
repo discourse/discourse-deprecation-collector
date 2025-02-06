@@ -1,12 +1,12 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { service } from "@ember/service";
+import DEPRECATION_WORKFLOW from "discourse/deprecation-workflow";
+import discourseDebounce from "discourse/lib/debounce";
+import { bind } from "discourse/lib/decorators";
+import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse/lib/deprecated";
+import getURL from "discourse/lib/get-url";
 import identifySource from "discourse/lib/source-identifier";
-import DEPRECATION_WORKFLOW from "discourse-common/deprecation-workflow";
-import discourseDebounce from "discourse-common/lib/debounce";
-import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse-common/lib/deprecated";
-import getURL from "discourse-common/lib/get-url";
-import { bind } from "discourse-common/utils/decorators";
 
 // Deprecation handling APIs don't have any way to unregister handlers, so we set up permanent
 // handlers and link them up to the application lifecycle using module-local state.
