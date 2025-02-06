@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@babel/parser": "^7.26.2",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/traverse": "^7.25.9",
+    "@babel/types": "^7.26.0",
+    "content-tag": "^2.0.3",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">= 18",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">= 9"
+  },
+  "packageManager": "pnpm@9.15.5"
+}
