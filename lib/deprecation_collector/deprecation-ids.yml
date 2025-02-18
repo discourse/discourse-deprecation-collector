@@ -61,7 +61,6 @@ discourse_deprecation_ids:
 - discourse.mobile-templates
 - discourse.modal-controllers
 - discourse.models-store
-- discourse.name-validation-mixin
 - discourse.nav-item.built-list-site-settings
 - discourse.navigation-category-controller
 - discourse.number-field
