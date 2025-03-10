@@ -23,7 +23,6 @@ discourse_deprecation_ids:
 - discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
 - discourse.component-template-overrides
-- discourse.component-test
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
 - discourse.create-store-helper
@@ -31,7 +30,6 @@ discourse_deprecation_ids:
 - discourse.createNewTopicViaParams
 - discourse.current-theme-key
 - discourse.custom_html_template
-- discourse.d-button-action-string
 - discourse.d-editor.on-toolbar-create
 - discourse.d-popover
 - discourse.d-section
@@ -68,7 +66,6 @@ discourse_deprecation_ids:
 - discourse.plugin-outlet-args
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
-- discourse.plugin-outlet-parent-view
 - discourse.plugin-outlet-tag-name
 - discourse.post-menu-widget-overrides
 - discourse.post-stream.trigger-new-post
