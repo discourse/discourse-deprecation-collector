@@ -80,6 +80,7 @@ discourse_deprecation_ids:
 - discourse.section-link-class-arg
 - discourse.select-kit
 - discourse.show-popover
+- discourse.singleton-mixin
 - discourse.tag-show-controller
 - discourse.text.cook-async
 - discourse.this-container
