@@ -38,7 +38,6 @@ discourse_deprecation_ids:
 - discourse.discourse-module
 - discourse.discovery-topics-controller
 - discourse.fa-icon
-- discourse.fontawesome-6-upgrade
 - discourse.formatter.update-relative-age-node-list
 - discourse.get-owner-with-fallback
 - discourse.global.site
@@ -67,7 +66,6 @@ discourse_deprecation_ids:
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
 - discourse.plugin-outlet-tag-name
-- discourse.post-menu-widget-overrides
 - discourse.post-stream-widget-overrides
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
