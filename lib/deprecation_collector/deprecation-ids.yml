@@ -45,7 +45,6 @@ discourse_deprecation_ids:
 - discourse.global.user
 - discourse.globals.site
 - discourse.globals.user
-- discourse.hbr-topic-list-overrides
 - discourse.header-extra-info.needs-second-row-if
 - discourse.header-service-topic
 - discourse.hide-popover
@@ -54,6 +53,7 @@ discourse_deprecation_ids:
 - discourse.inline-date
 - discourse.is-legacy-ember
 - discourse.jquery-cookie
+- discourse.legacy-topic-list
 - discourse.markdown-it.whitelist
 - discourse.mobile-templates
 - discourse.modal-controllers
@@ -72,6 +72,7 @@ discourse_deprecation_ids:
 - discourse.qunit.acceptance-function
 - discourse.qunit.global-exists
 - discourse.register-connector-class-legacy
+- discourse.register-raw-helper
 - discourse.register-unbound
 - discourse.resolver-resolutions
 - discourse.resolver-template-overrides
