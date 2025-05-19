@@ -1,5 +1,2 @@
-discourse/app/assets/javascripts/discourse/app/components/topic-list-item.gjs
-discourse/app/assets/javascripts/discourse/app/components/topic-list.gjs
-discourse/app/assets/javascripts/discourse/app/helpers/topic-status-icons.js
-discourse/app/assets/javascripts/discourse/app/lib/raw-templates.js
-discourse/app/assets/javascripts/discourse/app/raw-views/topic-status.js
+discourse/app/assets/javascripts/discourse/app/components/decorated-html.gjs
+discourse/app/assets/javascripts/discourse/app/widgets/decorator-helper.js
