@@ -24,6 +24,7 @@ const EXCLUDED_DIR_PATTERNS = [
   "/discourse/plugins/",
 ];
 const filesToDebug = [];
+const idsToInclude = ["discourse.post-stream-widget-overrides"];
 
 async function isExcludedDir(filePath) {
   return EXCLUDED_DIR_PATTERNS.some((pattern) => filePath.includes(pattern));
@@ -205,14 +206,20 @@ async function parseDirectory(directoryPath) {
   }
 
   const directoryPath = process.argv[2];
-  const ids = [...new Set(await parseDirectory(directoryPath))].sort();
+  const idsParsed = await parseDirectory(directoryPath);
+  const ids = [...new Set(
+    [
+      ...idsParsed,
+      ...idsToInclude
+    ]
+  )].sort();
 
   if (filesToDebug.length > 0) {
     const filesToDebugFilePath = path.join(
       ".",
       "scripts",
       "files_to_debug.txt"
-    )
+    );
     fs.writeFileSync(filesToDebugFilePath, filesToDebug.join("\n"));
   }
 
