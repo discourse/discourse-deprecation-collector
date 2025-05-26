@@ -65,6 +65,7 @@ discourse_deprecation_ids:
 - discourse.number-field
 - discourse.offset-calculator.minimumOffset
 - discourse.plugin-outlet-args
+- discourse.plugin-outlet-classic-args-clash
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
 - discourse.post-stream-widget-overrides
