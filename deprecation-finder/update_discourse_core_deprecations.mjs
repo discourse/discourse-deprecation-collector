@@ -1,11 +1,12 @@
-import fs from "fs";
-import path from "path";
-import yaml from "js-yaml";
+/* eslint-disable no-console */
 import parser from "@babel/parser";
 import _traverse from "@babel/traverse";
 import * as t from "@babel/types";
-import { promisify } from "util";
 import { Preprocessor } from "content-tag";
+import fs from "fs";
+import yaml from "js-yaml";
+import path from "path";
+import { promisify } from "util";
 
 const traverse = _traverse.default;
 const readdir = promisify(fs.readdir);
@@ -74,9 +75,9 @@ function resolveIdentifier(name, scope, ast = null) {
     let argIndex;
     const calleeFunctionName = binding.path.findParent((p) => {
       if (p.isFunctionDeclaration()) {
-        const matchingArg = p.node.params.find((p) => p.name === name);
+        const matchingArg = p.node.params.find((param) => param.name === name);
         if (matchingArg) {
-          argIndex = p.node.params.findIndex((p) => p.name === name);
+          argIndex = p.node.params.findIndex((param) => param.name === name);
           return true;
         }
       }
@@ -100,9 +101,9 @@ function traverseForDeprecationId(
   }
 
   traverse(ast, {
-    CallExpression(path) {
-      if (t.isIdentifier(path.node.callee, { name: calleeFunctionName })) {
-        const id = path.node.arguments[argIndex].value;
+    CallExpression(_path) {
+      if (t.isIdentifier(_path.node.callee, { name: calleeFunctionName })) {
+        const id = _path.node.arguments[argIndex].value;
         if (id) {
           ids.push(id);
         }
@@ -130,24 +131,24 @@ async function parseFile(filePath) {
     const ids = [];
 
     traverse(ast, {
-      CallExpression(path) {
-        if (t.isIdentifier(path.node.callee, { name: "deprecated" })) {
+      CallExpression(_path) {
+        if (t.isIdentifier(_path.node.callee, { name: "deprecated" })) {
           hasDeprecatedFunction = true;
-          for (const arg of path.node.arguments) {
+          for (const arg of _path.node.arguments) {
             if (t.isObjectExpression(arg)) {
-              const extractedIds = extractId(arg, path.scope, ast);
+              const extractedIds = extractId(arg, _path.scope, ast);
               if (extractedIds) {
                 ids.push(...extractedIds);
               }
             } else if (t.isIdentifier(arg)) {
-              const resolvedIds = resolveIdentifier(arg.name, path.scope);
+              const resolvedIds = resolveIdentifier(arg.name, _path.scope);
               if (resolvedIds) {
                 ids.push(...resolvedIds);
               }
             } else if (t.isSpreadElement(arg)) {
               const resolvedIds = resolveIdentifier(
                 arg.argument.name,
-                path.scope
+                _path.scope
               );
               if (resolvedIds) {
                 ids.push(...resolvedIds);
@@ -207,12 +208,7 @@ async function parseDirectory(directoryPath) {
 
   const directoryPath = process.argv[2];
   const idsParsed = await parseDirectory(directoryPath);
-  const ids = [...new Set(
-    [
-      ...idsParsed,
-      ...idsToInclude
-    ]
-  )].sort();
+  const ids = [...new Set([...idsParsed, ...idsToInclude])].sort();
 
   if (filesToDebug.length > 0) {
     const filesToDebugFilePath = path.join(
