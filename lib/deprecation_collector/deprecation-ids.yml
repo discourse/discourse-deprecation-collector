@@ -23,7 +23,6 @@ discourse_deprecation_ids:
 - discourse.category-list.listForParent
 - discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
-- discourse.component-template-overrides
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
 - discourse.create-store-helper
@@ -57,7 +56,6 @@ discourse_deprecation_ids:
 - discourse.jquery-cookie
 - discourse.legacy-topic-list
 - discourse.markdown-it.whitelist
-- discourse.mobile-templates
 - discourse.modal-controllers
 - discourse.models-store
 - discourse.nav-item.built-list-site-settings
@@ -77,7 +75,6 @@ discourse_deprecation_ids:
 - discourse.register-raw-helper
 - discourse.register-unbound
 - discourse.resolver-resolutions
-- discourse.resolver-template-overrides
 - discourse.safari-hacks-disabled
 - discourse.section-link-class-arg
 - discourse.select-kit
