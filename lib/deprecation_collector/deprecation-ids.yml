@@ -78,6 +78,7 @@ discourse_deprecation_ids:
 - discourse.safari-hacks-disabled
 - discourse.section-link-class-arg
 - discourse.select-kit
+- discourse.select-kit-resolved-components
 - discourse.show-popover
 - discourse.tag-show-controller
 - discourse.text.cook-async
