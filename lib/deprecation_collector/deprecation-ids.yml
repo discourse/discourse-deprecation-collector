@@ -41,6 +41,7 @@ discourse_deprecation_ids:
 - discourse.format-age
 - discourse.formatter.update-relative-age-node-list
 - discourse.get-owner-with-fallback
+- discourse.get-url-helper
 - discourse.global.site
 - discourse.global.site-settings
 - discourse.global.user
@@ -93,4 +94,5 @@ discourse_deprecation_ids:
 - discourse.utils-decorators-import
 - discourse.utils-decorators-observes
 - discourse.utils-decorators-on
+- discourse.widgets-end-of-life
 - float-kit.d-toast.duration
