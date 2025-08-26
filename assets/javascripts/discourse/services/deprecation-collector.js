@@ -1,7 +1,7 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { service } from "@ember/service";
-import DEPRECATION_WORKFLOW from "discourse/deprecation-workflow";
+import DeprecationWorkflow from "discourse/deprecation-workflow";
 import discourseDebounce from "discourse/lib/debounce";
 import { bind } from "discourse/lib/decorators";
 import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse/lib/deprecated";
@@ -22,17 +22,12 @@ registerDiscourseDeprecationHandler((message, opts) =>
 export default class DeprecationCollector extends Service {
   @service router;
 
-  #configById = new Map();
   #counts = new Map();
   #reportDebounce;
 
   constructor() {
     super(...arguments);
     handler = this.track;
-
-    for (const c of DEPRECATION_WORKFLOW) {
-      this.#configById.set(c.matchId, c.handler);
-    }
 
     document.addEventListener("visibilitychange", this.handleVisibilityChanged);
     this.router.on("routeWillChange", this.debouncedReport);
@@ -59,7 +54,7 @@ export default class DeprecationCollector extends Service {
 
   @bind
   track(message, options) {
-    if (this.#configById.get(options.id) === "silence") {
+    if (DeprecationWorkflow.shouldSilence(options.id)) {
       return;
     }
 
