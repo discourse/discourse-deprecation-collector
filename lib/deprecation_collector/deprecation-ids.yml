@@ -1,149 +1,149 @@
 ---
 ember_deprecation_ids:
-  - component-template-resolving
-  - deprecate-array-prototype-extensions
-  - deprecate-implicit-route-model
-  - template-action
+- component-template-resolving
+- deprecate-array-prototype-extensions
+- deprecate-implicit-route-model
+- template-action
 discourse_deprecation_ids:
-  - discourse.add-flag-property
-  - discourse.add-toolbar-popup-menu-options-callback
-  - discourse.add-user-menu-glyph
-  - discourse.application-show-footer
-  - discourse.avatar-utils
-  - discourse.base-url
-  - discourse.bound-date
-  - discourse.breadcrumbs.childCategories
-  - discourse.breadcrumbs.firstCategory
-  - discourse.breadcrumbs.parentCategories
-  - discourse.breadcrumbs.parentCategoriesSorted
-  - discourse.breadcrumbs.parentCategory
-  - discourse.breadcrumbs.secondCategory
-  - discourse.capitalize-string
-  - discourse.category-hashtags.categoryHashtagTriggerRule
-  - discourse.category-list.listForParent
-  - discourse.chat.addToolbarButton
-  - discourse.click-track.is-valid-link-jquery
-  - discourse.composer-controller.clear-popup-menu-options-callback
-  - discourse.composer.usernames
-  - discourse.create-store-helper
-  - discourse.createNewMessageViaParams
-  - discourse.createNewTopicViaParams
-  - discourse.current-theme-key
-  - discourse.custom_html_template
-  - discourse.d-editor.on-toolbar-create
-  - discourse.d-popover
-  - discourse.d-section
-  - discourse.decorate-plugin-outlet
-  - discourse.deprecation-that-should-not-be-logged
-  - discourse.discourse-module
-  - discourse.discovery-topics-controller
-  - discourse.native-array-extensions.[]
-  - discourse.native-array-extensions.addObject
-  - discourse.native-array-extensions.addObjects
-  - discourse.native-array-extensions.addObserver
-  - discourse.native-array-extensions.any
-  - discourse.native-array-extensions.beginPropertyChanges
-  - discourse.native-array-extensions.cacheFor
-  - discourse.native-array-extensions.clear
-  - discourse.native-array-extensions.compact
-  - discourse.native-array-extensions.decrementProperty
-  - discourse.native-array-extensions.endPropertyChanges
-  - discourse.native-array-extensions.filterBy
-  - discourse.native-array-extensions.findBy
-  - discourse.native-array-extensions.get
-  - discourse.native-array-extensions.getEach
-  - discourse.native-array-extensions.getProperties
-  - discourse.native-array-extensions.hasObserverFor
-  - discourse.native-array-extensions.incrementProperty
-  - discourse.native-array-extensions.init
-  - discourse.native-array-extensions.insertAt
-  - discourse.native-array-extensions.invoke
-  - discourse.native-array-extensions.isAny
-  - discourse.native-array-extensions.isEvery
-  - discourse.native-array-extensions.mapBy
-  - discourse.native-array-extensions.notifyPropertyChange
-  - discourse.native-array-extensions.objectAt
-  - discourse.native-array-extensions.objectsAt
-  - discourse.native-array-extensions.popObject
-  - discourse.native-array-extensions.pushObject
-  - discourse.native-array-extensions.pushObjects
-  - discourse.native-array-extensions.reject
-  - discourse.native-array-extensions.rejectBy
-  - discourse.native-array-extensions.removeAt
-  - discourse.native-array-extensions.removeObject
-  - discourse.native-array-extensions.removeObjects
-  - discourse.native-array-extensions.removeObserver
-  - discourse.native-array-extensions.replace
-  - discourse.native-array-extensions.reverseObjects
-  - discourse.native-array-extensions.set
-  - discourse.native-array-extensions.setEach
-  - discourse.native-array-extensions.setObjects
-  - discourse.native-array-extensions.setProperties
-  - discourse.native-array-extensions.shiftObject
-  - discourse.native-array-extensions.sortBy
-  - discourse.native-array-extensions.toArray
-  - discourse.native-array-extensions.toggleProperty
-  - discourse.native-array-extensions.uniq
-  - discourse.native-array-extensions.uniqBy
-  - discourse.native-array-extensions.unshiftObject
-  - discourse.native-array-extensions.unshiftObjects
-  - discourse.native-array-extensions.without
-  - discourse.fa-icon
-  - discourse.format-age
-  - discourse.formatter.update-relative-age-node-list
-  - discourse.get-owner-with-fallback
-  - discourse.get-url-helper
-  - discourse.global.site
-  - discourse.global.site-settings
-  - discourse.global.user
-  - discourse.globals.site
-  - discourse.globals.user
-  - discourse.header-extra-info.needs-second-row-if
-  - discourse.header-service-topic
-  - discourse.hide-popover
-  - discourse.html-helper
-  - discourse.icon-renderer-translatedtitle
-  - discourse.inline-date
-  - discourse.is-legacy-ember
-  - discourse.jquery-cookie
-  - discourse.legacy-topic-list
-  - discourse.markdown-it.whitelist
-  - discourse.modal-controllers
-  - discourse.models-store
-  - discourse.nav-item.built-list-site-settings
-  - discourse.navigation-category-controller
-  - discourse.number-field
-  - discourse.offset-calculator.minimumOffset
-  - discourse.plugin-outlet-args
-  - discourse.plugin-outlet-classic-args-clash
-  - discourse.plugin-outlet-classic-hooks
-  - discourse.plugin-outlet-context-get
-  - discourse.post-stream-widget-overrides
-  - discourse.post-stream.trigger-new-post
-  - discourse.pretty-text.registerOption
-  - discourse.qunit.acceptance-function
-  - discourse.qunit.global-exists
-  - discourse.register-connector-class-legacy
-  - discourse.register-raw-helper
-  - discourse.register-unbound
-  - discourse.resolver-resolutions
-  - discourse.safari-hacks-disabled
-  - discourse.section-link-class-arg
-  - discourse.select-kit
-  - discourse.select-kit-resolved-components
-  - discourse.show-popover
-  - discourse.tag-show-controller
-  - discourse.text.cook-async
-  - discourse.this-container
-  - discourse.topic-list-find
-  - discourse.topic.totalUnread
-  - discourse.uploads.display-error-for-upload
-  - discourse.user-menu.panel-component-class
-  - discourse.user-stream-item
-  - discourse.user.resolved-timezone
-  - discourse.user.userOptions
-  - discourse.utils-decorators-import
-  - discourse.utils-decorators-observes
-  - discourse.utils-decorators-on
-  - discourse.widgets-end-of-life
-  - float-kit.d-toast.duration
+- discourse.add-flag-property
+- discourse.add-toolbar-popup-menu-options-callback
+- discourse.add-user-menu-glyph
+- discourse.application-show-footer
+- discourse.avatar-utils
+- discourse.base-url
+- discourse.bound-date
+- discourse.breadcrumbs.childCategories
+- discourse.breadcrumbs.firstCategory
+- discourse.breadcrumbs.parentCategories
+- discourse.breadcrumbs.parentCategoriesSorted
+- discourse.breadcrumbs.parentCategory
+- discourse.breadcrumbs.secondCategory
+- discourse.capitalize-string
+- discourse.category-hashtags.categoryHashtagTriggerRule
+- discourse.category-list.listForParent
+- discourse.chat.addToolbarButton
+- discourse.click-track.is-valid-link-jquery
+- discourse.composer-controller.clear-popup-menu-options-callback
+- discourse.composer.usernames
+- discourse.create-store-helper
+- discourse.createNewMessageViaParams
+- discourse.createNewTopicViaParams
+- discourse.current-theme-key
+- discourse.custom_html_template
+- discourse.d-editor.on-toolbar-create
+- discourse.d-popover
+- discourse.d-section
+- discourse.decorate-plugin-outlet
+- discourse.deprecation-that-should-not-be-logged
+- discourse.discourse-module
+- discourse.discovery-topics-controller
+- discourse.native-array-extensions.[]
+- discourse.native-array-extensions.addObject
+- discourse.native-array-extensions.addObjects
+- discourse.native-array-extensions.addObserver
+- discourse.native-array-extensions.any
+- discourse.native-array-extensions.beginPropertyChanges
+- discourse.native-array-extensions.cacheFor
+- discourse.native-array-extensions.clear
+- discourse.native-array-extensions.compact
+- discourse.native-array-extensions.decrementProperty
+- discourse.native-array-extensions.endPropertyChanges
+- discourse.native-array-extensions.filterBy
+- discourse.native-array-extensions.findBy
+- discourse.native-array-extensions.get
+- discourse.native-array-extensions.getEach
+- discourse.native-array-extensions.getProperties
+- discourse.native-array-extensions.hasObserverFor
+- discourse.native-array-extensions.incrementProperty
+- discourse.native-array-extensions.init
+- discourse.native-array-extensions.insertAt
+- discourse.native-array-extensions.invoke
+- discourse.native-array-extensions.isAny
+- discourse.native-array-extensions.isEvery
+- discourse.native-array-extensions.mapBy
+- discourse.native-array-extensions.notifyPropertyChange
+- discourse.native-array-extensions.objectAt
+- discourse.native-array-extensions.objectsAt
+- discourse.native-array-extensions.popObject
+- discourse.native-array-extensions.pushObject
+- discourse.native-array-extensions.pushObjects
+- discourse.native-array-extensions.reject
+- discourse.native-array-extensions.rejectBy
+- discourse.native-array-extensions.removeAt
+- discourse.native-array-extensions.removeObject
+- discourse.native-array-extensions.removeObjects
+- discourse.native-array-extensions.removeObserver
+- discourse.native-array-extensions.replace
+- discourse.native-array-extensions.reverseObjects
+- discourse.native-array-extensions.set
+- discourse.native-array-extensions.setEach
+- discourse.native-array-extensions.setObjects
+- discourse.native-array-extensions.setProperties
+- discourse.native-array-extensions.shiftObject
+- discourse.native-array-extensions.sortBy
+- discourse.native-array-extensions.toArray
+- discourse.native-array-extensions.toggleProperty
+- discourse.native-array-extensions.uniq
+- discourse.native-array-extensions.uniqBy
+- discourse.native-array-extensions.unshiftObject
+- discourse.native-array-extensions.unshiftObjects
+- discourse.native-array-extensions.without
+- discourse.fa-icon
+- discourse.format-age
+- discourse.formatter.update-relative-age-node-list
+- discourse.get-owner-with-fallback
+- discourse.get-url-helper
+- discourse.global.site
+- discourse.global.site-settings
+- discourse.global.user
+- discourse.globals.site
+- discourse.globals.user
+- discourse.header-extra-info.needs-second-row-if
+- discourse.header-service-topic
+- discourse.hide-popover
+- discourse.html-helper
+- discourse.icon-renderer-translatedtitle
+- discourse.inline-date
+- discourse.is-legacy-ember
+- discourse.jquery-cookie
+- discourse.legacy-topic-list
+- discourse.markdown-it.whitelist
+- discourse.modal-controllers
+- discourse.models-store
+- discourse.nav-item.built-list-site-settings
+- discourse.navigation-category-controller
+- discourse.number-field
+- discourse.offset-calculator.minimumOffset
+- discourse.plugin-outlet-args
+- discourse.plugin-outlet-classic-args-clash
+- discourse.plugin-outlet-classic-hooks
+- discourse.plugin-outlet-context-get
+- discourse.post-stream-widget-overrides
+- discourse.post-stream.trigger-new-post
+- discourse.pretty-text.registerOption
+- discourse.qunit.acceptance-function
+- discourse.qunit.global-exists
+- discourse.register-connector-class-legacy
+- discourse.register-raw-helper
+- discourse.register-unbound
+- discourse.resolver-resolutions
+- discourse.safari-hacks-disabled
+- discourse.section-link-class-arg
+- discourse.select-kit
+- discourse.select-kit-resolved-components
+- discourse.show-popover
+- discourse.tag-show-controller
+- discourse.text.cook-async
+- discourse.this-container
+- discourse.topic-list-find
+- discourse.topic.totalUnread
+- discourse.uploads.display-error-for-upload
+- discourse.user-menu.panel-component-class
+- discourse.user-stream-item
+- discourse.user.resolved-timezone
+- discourse.user.userOptions
+- discourse.utils-decorators-import
+- discourse.utils-decorators-observes
+- discourse.utils-decorators-on
+- discourse.widgets-end-of-life
+- float-kit.d-toast.duration
