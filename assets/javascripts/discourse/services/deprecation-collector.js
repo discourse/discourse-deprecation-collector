@@ -22,12 +22,23 @@ registerDiscourseDeprecationHandler((message, opts) =>
 export default class DeprecationCollector extends Service {
   @service router;
 
+  #configById = new Map();
   #counts = new Map();
   #reportDebounce;
 
   constructor() {
     super(...arguments);
     handler = this.track;
+
+    // TODO (discourse.native-array-extensions) remove the map and related code once we get to v3.6.0.beta2-dev and can
+    //   also update .discourse-compatibility accordingly.
+    // populate the map if the `shouldSilence` is not defined in the deprecation workflow. it means the plugin is
+    // deployed with an older version of core.
+    if (!DeprecationWorkflow.shouldSilence) {
+      for (const c of DeprecationWorkflow) {
+        this.#configById.set(c.matchId, c.handler);
+      }
+    }
 
     document.addEventListener("visibilitychange", this.handleVisibilityChanged);
     this.router.on("routeWillChange", this.debouncedReport);
@@ -54,8 +65,15 @@ export default class DeprecationCollector extends Service {
 
   @bind
   track(message, options) {
-    if (DeprecationWorkflow.shouldSilence(options.id)) {
-      return;
+    // TODO (discourse.native-array-extensions) keep only `if (DeprecationWorkflow.shouldSilence(options.id))` once we get to v3.6.0.beta2-dev
+    if (DeprecationWorkflow.shouldSilence) {
+      if (DeprecationWorkflow.shouldSilence(options.id)) {
+        return;
+      }
+    } else {
+      if (this.#configById.get(options.id) === "silence") {
+        return;
+      }
     }
 
     if (identifySource()?.type === "browser-extension") {
