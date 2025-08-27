@@ -1,7 +1,7 @@
 import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { service } from "@ember/service";
-import DEPRECATION_WORKFLOW from "discourse/deprecation-workflow";
+import DeprecationWorkflow from "discourse/deprecation-workflow";
 import discourseDebounce from "discourse/lib/debounce";
 import { bind } from "discourse/lib/decorators";
 import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse/lib/deprecated";
@@ -30,8 +30,14 @@ export default class DeprecationCollector extends Service {
     super(...arguments);
     handler = this.track;
 
-    for (const c of DEPRECATION_WORKFLOW) {
-      this.#configById.set(c.matchId, c.handler);
+    // TODO (discourse.native-array-extensions) remove the map and related code once we get to v3.6.0.beta2-dev and can
+    //   also update .discourse-compatibility accordingly.
+    // populate the map if the `shouldSilence` is not defined in the deprecation workflow. it means the plugin is
+    // deployed with an older version of core.
+    if (!DeprecationWorkflow.shouldSilence) {
+      for (const c of DeprecationWorkflow) {
+        this.#configById.set(c.matchId, c.handler);
+      }
     }
 
     document.addEventListener("visibilitychange", this.handleVisibilityChanged);
@@ -59,8 +65,15 @@ export default class DeprecationCollector extends Service {
 
   @bind
   track(message, options) {
-    if (this.#configById.get(options.id) === "silence") {
-      return;
+    // TODO (discourse.native-array-extensions) keep only `if (DeprecationWorkflow.shouldSilence(options.id))` once we get to v3.6.0.beta2-dev
+    if (DeprecationWorkflow.shouldSilence) {
+      if (DeprecationWorkflow.shouldSilence(options.id)) {
+        return;
+      }
+    } else {
+      if (this.#configById.get(options.id) === "silence") {
+        return;
+      }
     }
 
     if (identifySource()?.type === "browser-extension") {
