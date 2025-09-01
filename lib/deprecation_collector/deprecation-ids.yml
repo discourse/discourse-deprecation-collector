@@ -23,6 +23,7 @@ discourse_deprecation_ids:
 - discourse.category-list.listForParent
 - discourse.chat.addToolbarButton
 - discourse.click-track.is-valid-link-jquery
+- discourse.component-template-resolving
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
 - discourse.create-store-helper
@@ -132,7 +133,10 @@ discourse_deprecation_ids:
 - discourse.select-kit
 - discourse.select-kit-resolved-components
 - discourse.show-popover
+- discourse.site.is-mobile-device
+- discourse.static-viewport-initialization
 - discourse.tag-show-controller
+- discourse.template-action
 - discourse.text.cook-async
 - discourse.this-container
 - discourse.topic-list-find
