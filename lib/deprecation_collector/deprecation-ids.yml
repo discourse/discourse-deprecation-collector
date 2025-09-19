@@ -55,6 +55,7 @@ discourse_deprecation_ids:
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
 - discourse.is-legacy-ember
+- discourse.jquery-autocomplete
 - discourse.jquery-cookie
 - discourse.legacy-topic-list
 - discourse.markdown-it.whitelist
