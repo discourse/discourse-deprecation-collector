@@ -35,6 +35,7 @@ discourse_deprecation_ids:
 - discourse.d-popover
 - discourse.d-section
 - discourse.decorate-plugin-outlet
+- discourse.deprecated-resolver-normalization
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discourse-module
 - discourse.discovery-topics-controller
