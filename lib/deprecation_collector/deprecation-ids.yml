@@ -151,5 +151,6 @@ discourse_deprecation_ids:
 - discourse.utils-decorators-import
 - discourse.utils-decorators-observes
 - discourse.utils-decorators-on
+- discourse.widgets-decommissioned
 - discourse.widgets-end-of-life
 - float-kit.d-toast.duration
