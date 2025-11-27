@@ -1,5 +1,0 @@
-discourse/app/assets/javascripts/discourse/app/components/topic-list-item.js
-discourse/app/assets/javascripts/discourse/app/components/topic-list.js
-discourse/app/assets/javascripts/discourse/app/helpers/topic-status-icons.js
-discourse/app/assets/javascripts/discourse/app/lib/raw-templates.js
-discourse/app/assets/javascripts/discourse/app/raw-views/topic-status.js
