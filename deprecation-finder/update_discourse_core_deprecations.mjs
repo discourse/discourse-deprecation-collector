@@ -15,7 +15,7 @@ const stat = promisify(fs.stat);
 const GJSPreprocessor = new Preprocessor();
 
 const EXCLUDED_DIR_PATTERNS = [
-  "/app/assets/javascripts/discourse/tests/unit/",
+  "/frontend/discourse/tests/unit/",
   "/discourse/tmp/",
   "node_modules",
   "/discourse/dist/",

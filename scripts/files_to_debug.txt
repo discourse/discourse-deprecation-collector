@@ -1,3 +1,3 @@
-discourse/app/assets/javascripts/discourse/app/array-shim.js
-discourse/app/assets/javascripts/discourse/app/components/decorated-html.gjs
-discourse/app/assets/javascripts/discourse/app/widgets/decorator-helper.js
+discourse/frontend/discourse/app/array-shim.js
+discourse/frontend/discourse/app/components/decorated-html.gjs
+discourse/frontend/discourse/app/widgets/decorator-helper.js
