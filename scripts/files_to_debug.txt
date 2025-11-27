@@ -1,3 +1,2 @@
 discourse/frontend/discourse/app/array-shim.js
 discourse/frontend/discourse/app/components/decorated-html.gjs
-discourse/frontend/discourse/app/widgets/decorator-helper.js
