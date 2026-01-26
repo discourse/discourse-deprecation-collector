@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe "Deprecation collector", type: :system do
+describe "Deprecation collector" do
   it "successfully reports deprecations to the server" do
     SiteSetting.deprecation_collector_enabled = true
 
