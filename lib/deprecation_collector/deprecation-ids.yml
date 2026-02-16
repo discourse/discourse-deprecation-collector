@@ -31,7 +31,6 @@ discourse_deprecation_ids:
 - discourse.createNewMessageViaParams
 - discourse.createNewTopicViaParams
 - discourse.current-theme-key
-- discourse.custom_html_template
 - discourse.d-editor.on-toolbar-create
 - discourse.d-popover
 - discourse.d-section
@@ -125,8 +124,6 @@ discourse_deprecation_ids:
 - discourse.post-stream-widget-overrides
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
-- discourse.qunit.acceptance-function
-- discourse.qunit.global-exists
 - discourse.register-connector-class-legacy
 - discourse.register-raw-helper
 - discourse.register-unbound
@@ -146,7 +143,6 @@ discourse_deprecation_ids:
 - discourse.topic.totalUnread
 - discourse.uploads.display-error-for-upload
 - discourse.user-menu.panel-component-class
-- discourse.user-stream-item
 - discourse.user.resolved-timezone
 - discourse.user.userOptions
 - discourse.utils-decorators-import
