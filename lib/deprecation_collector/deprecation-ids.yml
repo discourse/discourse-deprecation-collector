@@ -5,19 +5,13 @@ ember_deprecation_ids:
 - deprecate-implicit-route-model
 - template-action
 discourse_deprecation_ids:
-- discourse.add-flag-property
+- discourse.add-saveable-user-option-field
 - discourse.add-toolbar-popup-menu-options-callback
 - discourse.add-user-menu-glyph
 - discourse.application-show-footer
 - discourse.avatar-utils
 - discourse.base-url
 - discourse.bound-date
-- discourse.breadcrumbs.childCategories
-- discourse.breadcrumbs.firstCategory
-- discourse.breadcrumbs.parentCategories
-- discourse.breadcrumbs.parentCategoriesSorted
-- discourse.breadcrumbs.parentCategory
-- discourse.breadcrumbs.secondCategory
 - discourse.capitalize-string
 - discourse.category-hashtags.categoryHashtagTriggerRule
 - discourse.category-list.categories
@@ -27,11 +21,11 @@ discourse_deprecation_ids:
 - discourse.component-template-resolving
 - discourse.composer-controller.clear-popup-menu-options-callback
 - discourse.composer.usernames
+- discourse.computed-html-safe
 - discourse.create-store-helper
 - discourse.createNewMessageViaParams
 - discourse.createNewTopicViaParams
 - discourse.current-theme-key
-- discourse.custom_html_template
 - discourse.d-editor.on-toolbar-create
 - discourse.d-popover
 - discourse.d-section
@@ -41,6 +35,7 @@ discourse_deprecation_ids:
 - discourse.discourse-module
 - discourse.discovery-topics-controller
 - discourse.fa-icon
+- discourse.form-kit.legacy-field-yield
 - discourse.format-age
 - discourse.formatter.update-relative-age-node-list
 - discourse.get-owner-with-fallback
@@ -48,12 +43,12 @@ discourse_deprecation_ids:
 - discourse.global.site
 - discourse.global.site-settings
 - discourse.global.user
-- discourse.globals.site
-- discourse.globals.user
 - discourse.header-extra-info.needs-second-row-if
 - discourse.header-service-topic
 - discourse.hide-popover
 - discourse.html-helper
+- discourse.html-safe-helper
+- discourse.icon-picker
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
 - discourse.is-legacy-ember
@@ -61,7 +56,6 @@ discourse_deprecation_ids:
 - discourse.legacy-array-like-object.proxied-array
 - discourse.legacy-topic-list
 - discourse.markdown-it.whitelist
-- discourse.modal-controllers
 - discourse.models-store
 - discourse.native-array-extensions.[]
 - discourse.native-array-extensions.addObject
@@ -125,8 +119,6 @@ discourse_deprecation_ids:
 - discourse.post-stream-widget-overrides
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
-- discourse.qunit.acceptance-function
-- discourse.qunit.global-exists
 - discourse.register-connector-class-legacy
 - discourse.register-raw-helper
 - discourse.register-unbound
@@ -146,7 +138,6 @@ discourse_deprecation_ids:
 - discourse.topic.totalUnread
 - discourse.uploads.display-error-for-upload
 - discourse.user-menu.panel-component-class
-- discourse.user-stream-item
 - discourse.user.resolved-timezone
 - discourse.user.userOptions
 - discourse.utils-decorators-import
