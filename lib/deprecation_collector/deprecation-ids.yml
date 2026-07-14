@@ -34,6 +34,7 @@ discourse_deprecation_ids:
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discourse-module
 - discourse.discovery-topics-controller
+- discourse.es6-extension
 - discourse.fa-icon
 - discourse.form-kit.legacy-field-yield
 - discourse.format-age
