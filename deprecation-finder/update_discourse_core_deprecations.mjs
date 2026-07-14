@@ -78,6 +78,7 @@ const idsToInclude = [
   "discourse.native-array-extensions.unshiftObjects",
   "discourse.native-array-extensions.without",
   "discourse.hbs-extension",
+  "discourse.es6-extension",
 ];
 
 async function isExcludedDir(filePath) {
