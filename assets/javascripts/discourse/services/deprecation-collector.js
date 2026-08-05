@@ -1,23 +1,14 @@
-import { registerDeprecationHandler } from "@ember/debug";
 import { cancel } from "@ember/runloop";
 import Service, { service } from "@ember/service";
 import DeprecationWorkflow from "discourse/deprecation-workflow";
 import discourseDebounce from "discourse/lib/debounce";
 import { bind } from "discourse/lib/decorators";
-import { registerDeprecationHandler as registerDiscourseDeprecationHandler } from "discourse/lib/deprecated";
+import {
+  registerUniversalDeprecationHandler,
+  unregisterUniversalDeprecationHandler,
+} from "discourse/lib/deprecated";
 import getURL from "discourse/lib/get-url";
 import identifySource from "discourse/lib/source-identifier";
-
-// Deprecation handling APIs don't have any way to unregister handlers, so we set up permanent
-// handlers and link them up to the application lifecycle using module-local state.
-let handler;
-registerDeprecationHandler((message, opts, next) => {
-  handler?.(message, opts);
-  return next(message, opts);
-});
-registerDiscourseDeprecationHandler((message, opts) =>
-  handler?.(message, opts)
-);
 
 export default class DeprecationCollector extends Service {
   @service router;
@@ -28,7 +19,9 @@ export default class DeprecationCollector extends Service {
 
   constructor() {
     super(...arguments);
-    handler = this.track;
+
+    // buffered: true also counts deprecations fired before this service existed.
+    registerUniversalDeprecationHandler(this.track, { buffered: true });
 
     // TODO (discourse.native-array-extensions) remove the map and related code once we get to v3.6.0.beta2-dev and can
     //   also update .discourse-compatibility accordingly.
@@ -45,7 +38,7 @@ export default class DeprecationCollector extends Service {
   }
 
   willDestroy() {
-    handler = null;
+    unregisterUniversalDeprecationHandler(this.track);
     window.removeEventListener(
       "visibilitychange",
       this.handleVisibilityChanged
@@ -76,7 +69,7 @@ export default class DeprecationCollector extends Service {
       }
     }
 
-    if (identifySource()?.type === "browser-extension") {
+    if ((options.source || identifySource())?.type === "browser-extension") {
       return;
     }
 
