@@ -34,6 +34,7 @@ discourse_deprecation_ids:
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discourse-module
 - discourse.discovery-topics-controller
+- discourse.ember-computed-decorators
 - discourse.es6-extension
 - discourse.fa-icon
 - discourse.form-kit.legacy-field-yield
@@ -50,6 +51,7 @@ discourse_deprecation_ids:
 - discourse.hide-popover
 - discourse.html-helper
 - discourse.html-safe-helper
+- discourse.i18n-t-import
 - discourse.icon-picker
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
@@ -58,6 +60,7 @@ discourse_deprecation_ids:
 - discourse.legacy-array-like-object.proxied-array
 - discourse.legacy-topic-list
 - discourse.markdown-it.whitelist
+- discourse.modify-class-model
 - discourse.native-array-extensions.[]
 - discourse.native-array-extensions.addObject
 - discourse.native-array-extensions.addObjects
@@ -117,6 +120,7 @@ discourse_deprecation_ids:
 - discourse.plugin-outlet-classic-args-clash
 - discourse.plugin-outlet-classic-hooks
 - discourse.plugin-outlet-context-get
+- discourse.post-stream.first-post-id
 - discourse.post-stream.trigger-new-post
 - discourse.pretty-text.registerOption
 - discourse.qunit-helpers.jquery-selector
@@ -125,6 +129,7 @@ discourse_deprecation_ids:
 - discourse.register-raw-helper
 - discourse.register-unbound
 - discourse.resolver-resolutions
+- discourse.reviewable.legacy-component-lookup
 - discourse.safari-hacks-disabled
 - discourse.section-link-class-arg
 - discourse.select-kit
@@ -138,8 +143,15 @@ discourse_deprecation_ids:
 - discourse.this-container
 - discourse.topic-list-find
 - discourse.topic.totalUnread
+- discourse.translate-mod-key
+- discourse.ui-kit.d-draggable
 - discourse.uploads.display-error-for-upload
+- discourse.uppy-composer-upload-owner
+- discourse.uppy-upload-owner
+- discourse.uppy-wrapper-add-need-processing
+- discourse.user-menu.empty-state-component-class
 - discourse.user-menu.panel-component-class
+- discourse.user.groups
 - discourse.user.resolved-timezone
 - discourse.user.userOptions
 - discourse.utils-decorators-import

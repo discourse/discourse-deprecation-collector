@@ -13,6 +13,7 @@ const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const stat = promisify(fs.stat);
 const GJSPreprocessor = new Preprocessor();
+const EXTENSIONS = [".js", ".gjs", ".ts", ".gts"];
 
 const EXCLUDED_DIR_PATTERNS = [
   "/frontend/discourse/tests/unit/",
@@ -173,20 +174,29 @@ async function parseFile(filePath) {
   let code = await readFile(filePath, "utf8");
 
   try {
-    if (filePath.endsWith(".gjs")) {
+    if (filePath.endsWith(".gjs") || filePath.endsWith(".gts")) {
       code = GJSPreprocessor.process(code);
     }
 
     const ast = parser.parse(code, {
       sourceType: "module",
-      plugins: [["decorators", { version: "2023-11" }]],
+      plugins: [
+        ["decorators", { version: "2023-11" }],
+        ...(/\.g?ts$/.test(filePath) ? ["typescript"] : []),
+      ],
       errorRecovery: true,
     });
     const ids = [];
 
     traverse(ast, {
       CallExpression(_path) {
-        if (t.isIdentifier(_path.node.callee, { name: "deprecated" })) {
+        const callee = _path.node.callee;
+        if (
+          t.isIdentifier(callee, { name: "deprecated" }) ||
+          (t.isMemberExpression(callee) &&
+            t.isIdentifier(callee.object, { name: "deprecated" }) &&
+            t.isIdentifier(callee.property, { name: "default" }))
+        ) {
           hasDeprecatedFunction = true;
           for (const arg of _path.node.arguments) {
             if (t.isObjectExpression(arg)) {
@@ -233,10 +243,7 @@ async function parseDirectory(directoryPath) {
 
     const fileStat = await stat(filePath);
 
-    if (
-      fileStat.isFile() &&
-      (filePath.endsWith(".js") || filePath.endsWith(".gjs"))
-    ) {
+    if (fileStat.isFile() && EXTENSIONS.some((ext) => filePath.endsWith(ext))) {
       const [parsedIds, hasDeprecatedFunction] = await parseFile(filePath);
 
       if (hasDeprecatedFunction && parsedIds.length === 0) {
