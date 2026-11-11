@@ -40,6 +40,7 @@ const idsToInclude = [
   "discourse.native-array-extensions.endPropertyChanges",
   "discourse.native-array-extensions.filterBy",
   "discourse.native-array-extensions.findBy",
+  "discourse.native-array-extensions.firstObject",
   "discourse.native-array-extensions.get",
   "discourse.native-array-extensions.getEach",
   "discourse.native-array-extensions.getProperties",
@@ -50,6 +51,7 @@ const idsToInclude = [
   "discourse.native-array-extensions.invoke",
   "discourse.native-array-extensions.isAny",
   "discourse.native-array-extensions.isEvery",
+  "discourse.native-array-extensions.lastObject",
   "discourse.native-array-extensions.mapBy",
   "discourse.native-array-extensions.notifyPropertyChange",
   "discourse.native-array-extensions.objectAt",
@@ -80,6 +82,15 @@ const idsToInclude = [
   "discourse.native-array-extensions.without",
   "discourse.hbs-extension",
   "discourse.es6-extension",
+  "discourse.plugin-connector.deprecated-arg",
+  "discourse.plugin-connector.deprecated-arg.bread-crumbs-left",
+  "discourse.plugin-connector.deprecated-arg.bread-crumbs-right",
+  "discourse.to-markdown.addBlockDecorateCallback",
+  "discourse.to-markdown.addTagDecorateCallback",
+  "discourse.to-markdown.addTextDecorateCallback",
+  "discourse.to-markdown.clearBlockDecorateCallbacks",
+  "discourse.to-markdown.clearTagDecorateCallbacks",
+  "discourse.to-markdown.clearTextDecorateCallbacks",
 ];
 
 async function isExcludedDir(filePath) {
