@@ -34,6 +34,7 @@ discourse_deprecation_ids:
 - discourse.deprecation-that-should-not-be-logged
 - discourse.discourse-module
 - discourse.discovery-topics-controller
+- discourse.ember-computed-decorators
 - discourse.es6-extension
 - discourse.fa-icon
 - discourse.form-kit.legacy-field-yield
@@ -50,6 +51,7 @@ discourse_deprecation_ids:
 - discourse.hide-popover
 - discourse.html-helper
 - discourse.html-safe-helper
+- discourse.i18n-t-import
 - discourse.icon-picker
 - discourse.icon-renderer-translatedtitle
 - discourse.inline-date
@@ -113,6 +115,9 @@ discourse_deprecation_ids:
 - discourse.navigation-category-controller
 - discourse.number-field
 - discourse.offset-calculator.minimumOffset
+- discourse.plugin-connector.deprecated-arg
+- discourse.plugin-connector.deprecated-arg.bread-crumbs-left
+- discourse.plugin-connector.deprecated-arg.bread-crumbs-right
 - discourse.plugin-outlet-args
 - discourse.plugin-outlet-classic-args-clash
 - discourse.plugin-outlet-classic-hooks
@@ -136,6 +141,12 @@ discourse_deprecation_ids:
 - discourse.template-action
 - discourse.text.cook-async
 - discourse.this-container
+- discourse.to-markdown.addBlockDecorateCallback
+- discourse.to-markdown.addTagDecorateCallback
+- discourse.to-markdown.addTextDecorateCallback
+- discourse.to-markdown.clearBlockDecorateCallbacks
+- discourse.to-markdown.clearTagDecorateCallbacks
+- discourse.to-markdown.clearTextDecorateCallbacks
 - discourse.topic-list-find
 - discourse.topic.totalUnread
 - discourse.uploads.display-error-for-upload
